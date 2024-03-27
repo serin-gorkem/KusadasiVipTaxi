@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+p {
+    font-family: "Montserrat", "san-serif";
+}
+
+h1 {
+    font-family: "palanquin-dark,serif";
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: "palanquin, serif";
+}
+
+.max-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.navigation-menu {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 10px 0 0 10px  ;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
