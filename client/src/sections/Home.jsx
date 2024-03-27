@@ -9,7 +9,6 @@ export default function Home() {
 
   function toggleNavigationMenu(){
     setOpen(!open);
-    
   }
 
   return (

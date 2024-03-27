@@ -4,7 +4,7 @@ export default function App() {
   return (
     <>
 
-    <section className="relative" id="">
+    <section className="relative" >
       <Home />
     </section>
     </>

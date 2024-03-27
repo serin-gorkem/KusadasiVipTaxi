@@ -17,10 +17,7 @@ export default function Navbar(props) {
       </div>
       <div className="flex gap-3 justify-center items-center">
         <Dropdown />
-        <div
-          aria-label="horizontal line"
-          className="horizontal-line h-12 w-0.5 bg-slate-500 "
-        ></div>
+
         <RiMenu3Fill className="h-8 w-8 text-secondary-color cursor-pointer" onClick={props.toggleNavigationMenu} />
       </div>
     </nav>
@@ -28,5 +25,5 @@ export default function Navbar(props) {
 }
 
 Navbar.propTypes ={
-    toggleNavigationMenu: PropTypes.func
+    toggleNavigationMenu: PropTypes.func    
 }

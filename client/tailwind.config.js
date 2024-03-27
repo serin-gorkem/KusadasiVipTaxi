@@ -12,6 +12,21 @@ export default {
         "highlight-color":"#D5A928",
         "light-text":"#ffffff",
         "dark-text":"#0f0f0f"
+      },
+      animation:{
+        "fade-in-right": ' fadeInRight .5s linear '
+      },
+      keyframes:{
+        "fadeInRight":{
+          "0%":{
+            "opacity":"0",
+            "transform":"translateX(100px)"
+          },
+          "100%":{
+            "opacity":"1",
+            "transform":"translateX(0)"
+          }
+        }
       }
     },
   },
