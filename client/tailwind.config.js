@@ -14,17 +14,15 @@ export default {
         "dark-text":"#0f0f0f"
       },
       animation:{
-        "fade-in-right": ' fadeInRight .5s linear '
+        "progressBar": 'fill-progress-bar 4s linear'
       },
-      keyframes:{
-        "fadeInRight":{
+      keyframes : {
+        "fill-progress-bar" : {
           "0%":{
-            "opacity":"0",
-            "transform":"translateX(100px)"
+            "width":"0%"
           },
           "100%":{
-            "opacity":"1",
-            "transform":"translateX(0)"
+            "width":"100%"
           }
         }
       }
