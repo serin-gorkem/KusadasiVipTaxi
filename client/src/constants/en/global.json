@@ -1,0 +1,12 @@
+{
+    "home":{
+        "language":"En",
+        "title" : "WELCOME TO",
+        "subtitle" : "KUSADASI",
+        "slogan" : "With our comfortable ride, you can travel relaxed and cheap easily.",
+        "nav_home": "Home",
+        "nav_locations" : "Locations",
+        "nav_about" : "About",
+        "nav_testimonials" : "Testimonials"
+    }
+}

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Rerousel } from "rerousel";
 
-export default function ImageCarousel() {
+export default function Carousel() {
   const itemRefL = useRef(null);
   const itemRefP = useRef(null);
 
@@ -11,31 +11,27 @@ export default function ImageCarousel() {
         <Rerousel interval={4000} itemRef={itemRefL}>
           {carouselLandscapeImages.map((c) => {
             return (
-              <>
-                <img
-                  key={c.id}
-                  src={c.url}
-                  className="h-screen w-full object-cover"
-                  ref={itemRefL}
-                />
-              </>
+              <img
+                key={c.id}
+                src={c.url}
+                className="h-screen w-full object-cover"
+                ref={itemRefL}
+              />
             );
           })}
         </Rerousel>
       </div>
-      <div className="z-0 h-screen w-full bg-[#00000040] absolute "></div>
+      <div className="absolute z-0 h-screen w-full bg-[#00000040] "></div>
       <div className="pointer-events-none absolute -z-10 sm:hidden">
         <Rerousel interval={4000} itemRef={itemRefP}>
           {carouselPortraitImages.map((c) => {
             return (
-              <>
-                <img
-                  key={c.id}
-                  src={c.url}
-                  className="h-screen w-full"
-                  ref={itemRefP}
-                />
-              </>
+              <img
+                key={c.id}
+                src={c.url}
+                className="h-screen w-full"
+                ref={itemRefP}
+              />
             );
           })}
         </Rerousel>

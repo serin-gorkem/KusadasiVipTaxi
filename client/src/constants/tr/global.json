@@ -1,0 +1,12 @@
+{
+    "home":{
+        "language":"Tr",
+        "title" : " KUSADASI'NA",
+        "subtitle" : "HOŞGELDİNİZ",
+        "slogan" : "Rahat ve ucuz bir yolculukla, rahatça seyahat edebilirsiniz.",
+        "nav_home": "Anasayfa",
+        "nav_locations" : "Konumlar",
+        "nav_about" : "Hakkımızda",
+        "nav_testimonials" : "Referanslar"
+    }
+}

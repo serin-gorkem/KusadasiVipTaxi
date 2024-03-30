@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
+import PropTypes from 'prop-types';
 
-export default function Dropdown() {
+export default function Dropdown({handleLanguageChange,language}) {
   const [open, setOpen] = useState(false);
 
   function toggleDropdown(){
     setOpen(!open);
   }
-
-
   const countryList = countries.map((country) => {
     return (
       <>
@@ -16,6 +15,7 @@ export default function Dropdown() {
           key={country.id}
           value={country.id}
           className="hover:bg-highlight-color flex w-full items-center justify-evenly gap-2 navigation-menu text-white"
+          onClick={() => handleLanguageChange(country.name)}
         >
           {country.name}
           <img src={country.iconURL} className="h-8 w-8"></img>
@@ -27,7 +27,7 @@ export default function Dropdown() {
 
   return (
     <div className="relative flex items-center justify-center gap-1">
-      <p className="text-light-text"> ENG </p>
+      <p className="text-light-text"> {language("home.language")} </p>
       <IoMdArrowDropdown className=" text-highlight-color cursor-pointer" onClick={toggleDropdown} />
       <div
         aria-label="horizontal line"
@@ -43,22 +43,28 @@ export default function Dropdown() {
   );
 }
 
+Dropdown.propTypes = {
+  handleLanguageChange: PropTypes.func.isRequired,
+  language: PropTypes.func.isRequired
+}
+
+
 const countries = [
   {
     id: 1,
-    name: "TR",
+    name: "tr",
     iconURL:
       "http://purecatamphetamine.github.io/country-flag-icons/3x2/TR.svg",
   },
   {
     id: 2,
-    name: "EN",
+    name: "en",
     iconURL:
       "http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg",
   },
   {
     id: 3,
-    name: "DE",
+    name: "de",
     iconURL:
       "http://purecatamphetamine.github.io/country-flag-icons/3x2/DE.svg",
   },

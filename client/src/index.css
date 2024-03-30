@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* @layer components{
+    .selected-item{
+        @apply bg-highlight-color !important;
+    }
+} */
+
+
+
 p {
     font-family: "Montserrat", "san-serif";
 }
@@ -44,3 +53,4 @@ a {
        transform: translateX(0);
     }
  } 
+
