@@ -17,7 +17,7 @@ export default function Navbar(props) {
       </div>
       <div className="flex gap-3 justify-center items-center">
         <Dropdown handleLanguageChange = {props.handleLanguageChange} language={props.language}/>
-        <RiMenu3Fill className="h-8 w-8 text-secondary-color cursor-pointer" onClick={props.toggleNavigationMenu} />
+        <RiMenu3Fill className="h-8 w-8 text-white cursor-pointer" onClick={props.toggleNavigationMenu} />
       </div>
     </nav>
   );

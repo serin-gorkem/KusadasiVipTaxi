@@ -1,12 +1,15 @@
 {
-    "home":{
-        "language":"De",
-        "title" : "WILLKOMMEN BEI",
-        "subtitle" : "KUSADASI",
-        "slogan" : "Mit unserer komfortablen Fahrt können Sie entspannt und preiswert leicht reisen.",
-        "nav_home": "Startseite",
-        "nav_locations" : "Standorte",
-        "nav_about" : "Über uns",
-        "nav_testimonials" : "Kundenbewertungen"
-    }
+  "nav": {
+    "nav_home": "Startseite",
+    "nav_locations": "Standorte",
+    "nav_about": "Über uns",
+    "nav_testimonials": "Kundenbewertungen"
+  },
+
+  "home": {
+    "language": "DE",
+    "title": "WILLKOMMEN BEI",
+    "subtitle": "KUSADASI",
+    "slogan": "Mit unserer komfortablen Fahrt können Sie entspannt und preiswert leicht reisen."
+  }
 }

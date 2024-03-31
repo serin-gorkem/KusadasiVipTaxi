@@ -1,12 +1,15 @@
 {
-    "home":{
-        "language":"Tr",
-        "title" : " KUSADASI'NA",
-        "subtitle" : "HOŞGELDİNİZ",
-        "slogan" : "Rahat ve ucuz bir yolculukla, rahatça seyahat edebilirsiniz.",
-        "nav_home": "Anasayfa",
-        "nav_locations" : "Konumlar",
-        "nav_about" : "Hakkımızda",
-        "nav_testimonials" : "Referanslar"
-    }
+  "nav": {
+    "nav_home": "Anasayfa",
+    "nav_locations": "Konumlar",
+    "nav_about": "Hakkımızda",
+    "nav_testimonials": "Yorumlar",
+    "whatsapp_message":"Size nasıl yardımcı olabiliriz ?"
+  },
+  "home": {
+    "language": "TR",
+    "title": " KUSADASI'NA",
+    "subtitle": "HOŞGELDİNİZ",
+    "slogan": "Rahat ve ucuz bir yolculukla, rahatça seyahat edebilirsiniz."
+  }
 }

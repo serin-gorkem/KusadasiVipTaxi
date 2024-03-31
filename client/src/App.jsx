@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Home from "./sections/Home";
+import Locations from "./sections/Locations";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 import NavigationMenu from "./components/NavigationMenu";
@@ -7,8 +8,6 @@ import NavigationMenu from "./components/NavigationMenu";
 export default function App() {
   const [t, i18n] = useTranslation("global");
   const [open, setOpen] = useState(false);
-
-  
 
   function toggleNavigationMenu() {
     setOpen(!open);
@@ -34,7 +33,10 @@ export default function App() {
         />
       </header>
       <section className="relative">
-        <Home language={t} handleLanguageChange={handleLanguageChange} />,
+        <Home language={t} handleLanguageChange={handleLanguageChange} />
+      </section>
+      <section className="relative h-screen bg-secondary-color p-6">
+        <Locations />
       </section>
     </>
   );

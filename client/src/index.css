@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* @layer components{
-    .selected-item{
-        @apply bg-highlight-color !important;
-    }
-} */
-
-
-
 p {
     font-family: "Montserrat", "san-serif";
 }
@@ -28,29 +19,44 @@ a {
     font-family: "palanquin, serif";
 }
 
-.max-container {
-    max-width: 1024px;
-    margin: 0 auto;
+@layer components {
+    .max-container {
+        max-width: 1024px;
+        margin: 0 auto;
+
+        @media (min-width: 1536px) {
+            max-width: 1440px;
+        }
+    }
 }
 
-.navigation-menu {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(6.5px);
-    -webkit-backdrop-filter: blur(6.5px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+.glass-bg {
+    background: rgba( 0, 0, 0, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 14.5px );
+    -webkit-backdrop-filter: blur( 14.5px );
 }
-.open{
+
+.open {
     animation: fadeInRight .5 linear;
 }
+
 @keyframes fadeInRight {
     0% {
-       opacity: 0;
-       transform: translateX(20px);
+        opacity: 0;
+        transform: translateX(20px);
     }
-    100% {
-       opacity: 1;
-       transform: translateX(0);
-    }
- } 
 
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-md {
+    text-shadow: 6px 8px 2px rgba(0, 0, 0, 0.1);
+}

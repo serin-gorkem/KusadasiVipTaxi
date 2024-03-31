@@ -11,18 +11,18 @@ import i18next from "i18next";
 
 i18next
   .init({
-    fallbackLng: "en",
+    fallbackLng: "EN",
     interpolation: {
       escapeValue: false,
     },
     resources: {
-        en:{
+        EN:{
             global: global_en
         },
-        tr:{
+        TR:{
             global: global_tr
         },
-        de:{
+        DE:{
             global: global_de
         }
       },

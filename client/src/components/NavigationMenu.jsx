@@ -5,30 +5,26 @@ import PropTypes from "prop-types";
 export default function NavigationMenu(props) {
   const menuElementStrings = [
     {
-      id: 1,
-      name: props.language("home.nav_home"),
+      name: props.language("nav.nav_home"),
       url: "/",
     },
     {
-      id: 2,
-      name: props.language("home.nav_locations"),
+      name: props.language("nav.nav_locations"),
       url: "/locations",
     },
     {
-      id: 3,
-      name: props.language("home.nav_about"),
+      name: props.language("nav.nav_about"),
       url: "/about",
     },
     {
-      id: 4,
-      name: props.language("home.nav_testimonials"),
+      name: props.language("nav.nav_testimonials"),
       url: "/testimonials",
     },
   ];
 
   const menuItems = menuElementStrings.map((element) => {
     return (
-      <div key={element.id}>
+      <div key={element.n}>
         <li className="flex h-24 items-center justify-between px-3 text-white hover:bg-highlight-color">
           <a href={element.url} className="cursor-pointer" >{element.name}</a>
           <RiArrowDropRightLine className="h-8 w-8" />
@@ -42,7 +38,7 @@ export default function NavigationMenu(props) {
       {props.open && (
         <div
           aria-label="navigation menu"
-          className="navigation-menu fixed right-0 z-50 h-screen w-1/2 sm:w-1/5 "
+          className="glass-bg fixed right-0 z-50 h-screen w-1/2 sm:w-1/5 "
         >
           <IoCloseCircle
             className=" absolute right-2 top-5 h-8 w-8 cursor-pointer text-highlight-color"
