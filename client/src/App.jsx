@@ -35,7 +35,7 @@ export default function App() {
       <section className="relative">
         <Home language={t} handleLanguageChange={handleLanguageChange} />
       </section>
-      <section className="relative h-screen bg-secondary-color p-6">
+      <section className="relative bg-secondary-color p-6">
         <Locations />
       </section>
     </>

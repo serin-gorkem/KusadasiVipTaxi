@@ -9,14 +9,8 @@ export default function Home({ language }) {
   setInterval(() => {
     document
       .querySelector(".progress-fill")
-      .classList.remove("animate-progressBar");
+      .classList.toggle("animate-progressBar");
   }, 4000);
-
-  setInterval(() => {
-    document
-      .querySelector(".progress-fill")
-      .classList.add("animate-progressBar");
-  }, 4010);
 
   setTimeout(() => {
     setShowPopUp(true);

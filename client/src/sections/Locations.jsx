@@ -1,57 +1,129 @@
-import { useRef } from "react";
-import {
-  IoMdArrowDropleftCircle,
-  IoMdArrowDroprightCircle,
-} from "react-icons/io";
-import { Rerousel } from "rerousel";
+import Slider from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import locationData from "../constants/Locations/Info.json"
+import PropTypes from "prop-types";
 
 export default function Locations() {
-  const itemRefL = useRef(null);
+  const outerSliderResponsiveness = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 1,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
-    <div className="max-container flex flex-col items-center justify-center gap-2  text-dark-text ">
-      <h1 className="text-shadow-md text-2xl font-bold sm:text-6xl">
+    <Slider
+      responsive={outerSliderResponsiveness}
+      className="max-container"
+      arrows={true}
+      swipeable={false}
+      draggable={false}
+    >
+    { locationData.map((element) => {
+      return (
+        <Location
+          key={element.id}
+          images={element.images}
+          title={element.title}
+          mapURL={element.mapURL}
+          text={element.text}
+          readMore={element.readMore}
+        />
+      )
+    }) }
+    </Slider>
+  );
+}
+
+function Location(props) {
+  const innerSliderResponsiveness = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
+
+  return (
+    <div className="max-container mx-2 flex flex-col items-center justify-center gap-2 px-2 text-dark-text ">
+      <h1 className="text-shadow-md text-2xl font-extrabold sm:text-3xl">
         Konumlarımızı Keşfedin
       </h1>
-      <h2 className="text-xl sm:text-3xl ">Efes Antik Kenti Nerede ?</h2>
-      <img src="./efes.jpg" className="rounded-md" />
-      <div>
-        <Rerousel interval={5000} itemRef={itemRefL}>
-          {placeImages.map((image) => {
-            return (
-              <div key={image.id} className="w-[50% - 8px] flex justify-center items-center mx-2">
-                <img
-                  src={image.url}
-                  className="w-full rounded-md object-cover h-32"
-                  ref={itemRefL}
-                />
-              </div>
-            );
-          })}
-        </Rerousel>
+      <h2 className="text-xl font-bold sm:text-xl ">{props.title} Nerede ?</h2>
+      <div className="flex w-full items-center justify-center">
+        <iframe
+          className=" h-96 w-full shadow-md sm:w-3/5"
+          src={props.mapURL}
+          loading="lazy"
+        ></iframe>
       </div>
-      <p className=" text-xs">
-        Habitasse platea dictumst vestibulum rhoncus est pellentesque elit
-        ullamcorper dignissim. Condimentum id venenatis a condimentum viet.{" "}
-      </p>
-      <div className="flex w-full justify-between">
-        <IoMdArrowDropleftCircle />
-        <IoMdArrowDroprightCircle />
+      <Slider
+        responsive={innerSliderResponsiveness}
+        arrows={false}
+        infinite={true}
+        autoPlay={true}
+        transitionDuration={800}
+        autoPlaySpeed={4000}
+        swipeable={true}
+        draggable={true}
+        className="h-[500px] w-full sm:h-full sm:w-3/5 "
+      >
+        {props.images.map((image) => {
+          return (
+            <div key={image.id} className="h-full">
+              <img
+                src={image.url}
+                className="h-[500px] w-full rounded-full bg-center object-cover sm:h-full sm:rounded-none px-1"
+              />
+            </div>
+          );
+        })}
+      </Slider>
+      <div className="sm:w-3/5">
+        <p className=" ">{props.text}</p>
+        <a href={props.readMore} className="text-highlight-color underline cursor-pointer">
+          Daha fazla oku
+        </a>
       </div>
     </div>
   );
 }
 
-const placeImages = [
-  {
-    id: 1,
-    url: "https://images.unsplash.com/photo-1582380625189-423697e32b92?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 2,
-    url: "https://images.unsplash.com/photo-1583063158384-33a27265dcf3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    url: "https://images.unsplash.com/photo-1664798624786-276827c757ad?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
+Location.propTypes = {
+  title: PropTypes.string.isRequired,
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
+  mapURL: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  readMore: PropTypes.string.isRequired,
+};
+
