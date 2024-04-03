@@ -4,6 +4,7 @@ import Locations from "./sections/Locations";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 import NavigationMenu from "./components/NavigationMenu";
+import ChooseUs from "./sections/ChooseUs";
 
 export default function App() {
   const [t, i18n] = useTranslation("global");
@@ -37,6 +38,11 @@ export default function App() {
       </section>
       <section className="relative bg-secondary-color p-6">
         <Locations />
+      </section>
+      <section>
+        <ChooseUs />
+      </section>
+      <section>
       </section>
     </>
   );

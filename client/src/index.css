@@ -2,21 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
-    font-family: "Montserrat", "san-serif";
+h1,h2,h3{
+    @apply font-title;
 }
-
-h1 {
-    font-family: "palanquin-dark,serif";
+h4,h5,h6,a {
+    @apply font-subTitle;
 }
-
-h2,
-h3,
-h4,
-h5,
-h6,
-a {
-    font-family: "palanquin, serif";
+p{
+    @apply font-text;
 }
 
 @layer components {

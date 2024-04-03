@@ -1,9 +1,11 @@
 import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import locationData from "../constants/Locations/Info.json"
+import locationData from "../constants/Locations/Info.json";
 import PropTypes from "prop-types";
+import { useRef } from "react";
 
 export default function Locations() {
+  const playSpeedRef = useRef(5000);
   const outerSliderResponsiveness = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -24,26 +26,37 @@ export default function Locations() {
     },
   };
   return (
-    <Slider
-      responsive={outerSliderResponsiveness}
-      className="max-container"
-      arrows={true}
-      swipeable={false}
-      draggable={false}
+    <div
+      className="locations"
+      ref={playSpeedRef}
+      onMouseEnter={() => (playSpeedRef.current = 0)}
+      onMouseLeave={() => (playSpeedRef.current = 5000)}
     >
-    { locationData.map((element) => {
-      return (
-        <Location
-          key={element.id}
-          images={element.images}
-          title={element.title}
-          mapURL={element.mapURL}
-          text={element.text}
-          readMore={element.readMore}
-        />
-      )
-    }) }
-    </Slider>
+      <Slider
+        responsive={outerSliderResponsiveness}
+        className="max-container"
+        arrows={true}
+        autoPlay={true}
+        autoPlaySpeed={playSpeedRef.current}
+        swipeable={false}
+        draggable={false}
+        infinite={true}
+        ref={playSpeedRef}
+      >
+        {locationData.map((element) => {
+          return (
+            <Location
+              key={element.id}
+              images={element.images}
+              title={element.title}
+              mapURL={element.mapURL}
+              text={element.text}
+              readMore={element.readMore}
+            />
+          );
+        })}
+      </Slider>
+    </div>
   );
 }
 
@@ -68,7 +81,6 @@ function Location(props) {
     },
   };
 
-
   return (
     <div className="max-container mx-2 flex flex-col items-center justify-center gap-2 px-2 text-dark-text ">
       <h1 className="text-shadow-md text-2xl font-extrabold sm:text-3xl">
@@ -91,14 +103,14 @@ function Location(props) {
         autoPlaySpeed={4000}
         swipeable={true}
         draggable={true}
-        className="h-[500px] w-full sm:h-full sm:w-3/5 "
+        className="h-[500px] w-full sm:h-full sm:w-3/5  "
       >
         {props.images.map((image) => {
           return (
             <div key={image.id} className="h-full">
               <img
                 src={image.url}
-                className="h-[500px] w-full rounded-full bg-center object-cover sm:h-full sm:rounded-none px-1"
+                className="h-[500px] w-full rounded-full bg-center object-cover px-1 sm:h-full sm:rounded-none"
               />
             </div>
           );
@@ -106,7 +118,10 @@ function Location(props) {
       </Slider>
       <div className="sm:w-3/5">
         <p className=" ">{props.text}</p>
-        <a href={props.readMore} className="text-highlight-color underline cursor-pointer">
+        <a
+          href={props.readMore}
+          className="cursor-pointer text-highlight-color underline"
+        >
           Daha fazla oku
         </a>
       </div>
@@ -126,4 +141,3 @@ Location.propTypes = {
   text: PropTypes.string.isRequired,
   readMore: PropTypes.string.isRequired,
 };
-

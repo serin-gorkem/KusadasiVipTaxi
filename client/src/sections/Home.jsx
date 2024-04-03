@@ -27,7 +27,7 @@ export default function Home({ language }) {
           {language("home.subtitle")}
         </h2>
         <p className="z-10 sm:text-xl ">{language("home.slogan")}</p>
-        <div className="progress-bar z-50 mt-2 w-44 rounded-lg bg-secondary-color sm:w-56">
+        <div className="progress-bar z-10 mt-2 w-44 rounded-lg bg-secondary-color sm:w-56">
           <div className="progress-fill h-2 w-0 animate-progressBar rounded-lg bg-white transition-all duration-1000 ease-in-out sm:h-3"></div>
         </div>
         {showPopUp && (
