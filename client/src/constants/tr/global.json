@@ -4,7 +4,7 @@
     "nav_locations": "Konumlar",
     "nav_about": "Hakkımızda",
     "nav_testimonials": "Yorumlar",
-    "whatsapp_message":"Size nasıl yardımcı olabiliriz ?"
+    "whatsapp_message": "Size nasıl yardımcı olabiliriz ?"
   },
   "home": {
     "language": "TR",
@@ -12,7 +12,40 @@
     "subtitle": "HOŞGELDİNİZ",
     "slogan": "Rahat ve ucuz bir yolculukla, rahatça seyahat edebilirsiniz."
   },
-  "locations":{
-    
+  "locations": {
+    "heading": "Konumlarımızı Keşfedin",
+    "subheading":"Çeşitli konumlarımızla Ege Bölgesi'ni keşfedin",
+    "info_text": [
+      {
+        "id": "0",
+        "text": "Efes Antik Kenti MÖ 8600 dönemine basit bir yerleşim olarak başlamıştır ve Yüzyıllar içinde büyüyerek döneminin en önemli dünya başkentlerinden birisi olmuştur."
+      },
+      {
+        "id": "1",
+        "text": "Meryem Ana Evi, Selçuk’a 9 km. uzaklıktaki Bülbül Dağı üzerinde bulunmaktadır. İsa’nın ölümünden 4 ya da 6 yıl sonra St. John’un Meryem Ana’yı Efes’e getirdiği bilinmektedir. "
+      },
+      {
+        "id": "2",
+        "text": "İzmir’in Selçuk ilçesinde bir dağ köyü olan Şirince şüphesiz Türkiye’nin en estetik köylerindendir."
+      },
+      {
+        "id": "3",
+        "text": "Aydın iline bağlı olan Didim, Türkiye’nin önemli turizm beldelerinden biridir. Aydın merkezine 123 km uzaklıkta bulunur."
+      },
+      {
+        "id": "4",
+        "text": "İzmir; Manisa, Balıkesir ve Aydın illerine komşudur. Türkiye’nin en büyük 7. limanına ev sahipliği yapar."
+      },
+      {
+        "id": "5",
+        "text": "Dilek Yarımadası - Büyük Menderes Deltası Millî Parkı, Aydın il sınırları içinde Dilek Dağı'nın Ege Denizi'ne uzandığı son noktada yer alan millî parktır. 27.675 hektarlık bir alana sahiptir."
+      },
+      {
+        "id": "6",
+        "text": "Bodrum, Muğla'nın 13 ilçesinden birisidir. İlçe günümüzde önemli bir turizm merkezi olması ile anılmaktadır ki bunda Bodrum'un kendine has bazı özellikleri olması etkilidir."
+      }
+    ],
+    "more": "Daha fazla konum için bizimle whatsapp üzerinden iletişime geçebilirsiniz.",
+    "read_more": "Detaylı bilgi"
   }
 }

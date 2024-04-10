@@ -20,14 +20,14 @@ export default function ChooseUs() {
       <div className=" relative ">
         <div className="absolute h-[100%] w-full bg-[url('https://images.pexels.com/photos/10173024/pexels-photo-10173024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-fixed bg-center bg-no-repeat sm:hidden "></div>
         <div className="absolute min-h-screen sm:h-[100%] sm:min-h-fit w-full bg-[url('https://images.unsplash.com/photo-1514041181368-bca62cceffcd?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-fixed bg-center bg-no-repeat max-sm:hidden "></div>
-        <div className="absolute h-screen h-[100%] w-full bg-[#00000060] "></div>
+        <div className="absolute h-[100%] w-full bg-[#00000060] "></div>
         <div className="max-container top-0 flex w-full flex-col items-start p-6 text-white ">
           <h1 className="text-xl sm:text-2xl relative">Neden Bizi Tercih Etmelisiniz?</h1>
           <h2 className="text-lg sm:text-5xl font-bold relative ">En iyisini sunuyoruz</h2>
           {images.map((image) => {
             return(
               <Facts
-                key={image.alt}
+                key={image.src}
                 url={image.src}
                 alt={image.alt}
               />

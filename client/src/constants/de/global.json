@@ -1,15 +1,51 @@
 {
   "nav": {
-    "nav_home": "Startseite",
+    "nav_home": "Zuhause",
     "nav_locations": "Standorte",
     "nav_about": "Über uns",
-    "nav_testimonials": "Kundenbewertungen"
+    "nav_testimonials": "Testimonials",
+    "whatsapp_message": "Wie können wir Ihnen helfen?"
   },
-
   "home": {
     "language": "DE",
-    "title": "WILLKOMMEN BEI",
-    "subtitle": "KUSADASI",
-    "slogan": "Mit unserer komfortablen Fahrt können Sie entspannt und preiswert leicht reisen."
+    "title": " WILLKOMMEN IN KUSADASI",
+    "subtitle": "WILLKOMMEN",
+    "slogan": "Reisen Sie bequem und günstig, reisen Sie leicht."
+  },
+  "locations": {
+    "heading": "Entdecken Sie unsere Standorte",
+    "subheading": "Erkunden Sie die Ägäis mit unseren verschiedenen Standorten",
+    "info_text": [
+      {
+        "id": "0",
+        "text": "Die antike Stadt Ephesus begann als einfache Siedlung im Jahr 8600 v. Chr. und wuchs im Laufe der Jahrhunderte zu einer der wichtigsten Weltmetropolen ihrer Zeit heran."
+      },
+      {
+        "id": "1",
+        "text": "Das Haus der Jungfrau Maria befindet sich auf dem Berg Koressos, 9 km von Selçuk entfernt. Es ist bekannt, dass St. John die Jungfrau Maria 4 oder 6 Jahre nach dem Tod von Jesus nach Ephesus brachte."
+      },
+      {
+        "id": "2",
+        "text": "Şirince, ein Bergdorf im Bezirk Selçuk in Izmir, ist zweifellos eines der ästhetischsten Dörfer der Türkei."
+      },
+      {
+        "id": "3",
+        "text": "Didim, angegliedert an die Provinz Aydın, ist eines der wichtigen Tourismusziele der Türkei. Es liegt 123 km von der Stadtmitte von Aydın entfernt."
+      },
+      {
+        "id": "4",
+        "text": "Izmir; Es grenzt an die Provinzen Manisa, Balıkesir und Aydın. Es beherbergt den größten 7. Hafen der Türkei."
+      },
+      {
+        "id": "5",
+        "text": "Die Dilek-Halbinsel - Der Nationalpark Büyük Menderes Delta ist ein Nationalpark innerhalb der Grenzen der Provinz Aydın, an der südlichsten Stelle, wo der Berg Dilek sich bis zum Ägäischen Meer erstreckt. Es umfasst eine Fläche von 27.675 Hektar."
+      },
+      {
+        "id": "6",
+        "text": "Bodrum ist einer der 13 Bezirke von Muğla. Der Bezirk ist heute als wichtiger Tourismusort bekannt, der durch seine eigenen einzigartigen Merkmale zum Ruhm von Bodrum beiträgt."
+      }
+    ],
+    "more": "Für weitere Standorte können Sie uns über WhatsApp kontaktieren.",
+    "read_more": "Weitere Informationen"
   }
 }

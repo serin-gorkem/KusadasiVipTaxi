@@ -58,33 +58,45 @@ export default function Carousel() {
   ];
   return (
     <>
-        <Slider
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          arrows={false}
-          transitionDuration={800}
-          autoPlaySpeed={4100}
-          className="h-screen absolute w-full max-sm:hidden"
-        >
-          {carouselLandscapeImages.map((image) => {
-            return <img key={image.id} src={image.url} className="h-screen w-full object-cover" />;
-          })}
-        </Slider>
-        <div className="absolute z-0 h-screen w-full bg-[#00000040] "></div>
-        <Slider
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          arrows={false}
-          transitionDuration={800}
-          autoPlaySpeed={4000}
-          className="h-screen absolute w-full sm:hidden"
-        >
-          {carouselPortraitImages.map((image) => {
-            return <img key={image.id} src={image.url} className="h-screen w-full" />;
-          })}
-        </Slider>
+      <Slider
+        responsive={responsive}
+        infinite={true}
+        autoPlay={true}
+        arrows={false}
+        transitionDuration={800}
+        autoPlaySpeed={4100}
+        swipeable={false}
+        draggable={false}
+        className="absolute h-screen w-full max-sm:hidden"
+      >
+        {carouselLandscapeImages.map((image) => {
+          return (
+            <img
+              key={image.id}
+              src={image.url}
+              className="h-screen w-full object-cover"
+            />
+          );
+        })}
+      </Slider>
+      <div className="absolute z-0 h-screen w-full bg-[#00000040] "></div>
+      <Slider
+        responsive={responsive}
+        infinite={true}
+        autoPlay={true}
+        arrows={false}
+        transitionDuration={800}
+        autoPlaySpeed={4000}
+        swipeable={false}
+        draggable={false}
+        className="absolute h-screen w-full sm:hidden"
+      >
+        {carouselPortraitImages.map((image) => {
+          return (
+            <img key={image.id} src={image.url} className="h-screen w-full" />
+          );
+        })}
+      </Slider>
     </>
   );
 }

@@ -2,14 +2,50 @@
   "nav": {
     "nav_home": "Home",
     "nav_locations": "Locations",
-    "nav_about": "About",
+    "nav_about": "About Us",
     "nav_testimonials": "Testimonials",
-    "whatsapp_message":"How can we help you ?"
+    "whatsapp_message": "How can we help you?"
   },
   "home": {
     "language": "EN",
-    "title": "WELCOME TO",
-    "subtitle": "KUSADASI",
-    "slogan": "With our comfortable ride, you can travel relaxed and cheap easily."
+    "title": "WELCOME TO KUSADASI",
+    "subtitle": "WELCOME",
+    "slogan": "Travel comfortably and affordably, travel easily."
+  },
+  "locations": {
+    "heading": "Discover Our Locations",
+    "subheading": "Explore the Aegean Region with our various locations",
+    "info_text": [
+      {
+        "id": "0",
+        "text": "Ephesus Ancient City started as a simple settlement in 8600 BC and grew over the centuries to become one of the most important world capitals of its time."
+      },
+      {
+        "id": "1",
+        "text": "The House of Virgin Mary is located on Mount Koressos, 9 km from Selçuk. It is known that St. John brought Virgin Mary to Ephesus 4 or 6 years after the death of Jesus."
+      },
+      {
+        "id": "2",
+        "text": "Şirince, a mountain village in the Selçuk district of Izmir, is undoubtedly one of Turkey's most aesthetic villages."
+      },
+      {
+        "id": "3",
+        "text": "Didim, affiliated with Aydın province, is one of Turkey's important tourism destinations. It is located 123 km away from Aydın city center."
+      },
+      {
+        "id": "4",
+        "text": "Izmir; It is adjacent to the provinces of Manisa, Balıkesir, and Aydın. It is home to Turkey's largest 7th port."
+      },
+      {
+        "id": "5",
+        "text": "Dilek Peninsula - Büyük Menderes Delta National Park is a national park located within the borders of Aydın province, at the southernmost point where Mount Dilek extends to the Aegean Sea. It covers an area of 27,675 hectares."
+      },
+      {
+        "id": "6",
+        "text": "Bodrum is one of the 13 districts of Muğla. The district is known today as an important tourism center, which has its own unique characteristics that contribute to Bodrum's fame."
+      }
+    ],
+    "more": "You can contact us via WhatsApp for more locations.",
+    "read_more": "More Information"
   }
 }

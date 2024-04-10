@@ -25,7 +25,7 @@ export default function NavigationMenu(props) {
   const menuItems = menuElementStrings.map((element) => {
     return (
       <div key={element.n}>
-        <li className="flex h-24 items-center justify-between px-3 text-white hover:bg-highlight-color">
+        <li className="flex h-24 items-center justify-between px-3 text-white active:bg-primary-color hover:bg-primary-color">
           <a href={element.url} className="cursor-pointer" >{element.name}</a>
           <RiArrowDropRightLine className="h-8 w-8" />
         </li>
@@ -41,7 +41,7 @@ export default function NavigationMenu(props) {
           className="glass-bg fixed right-0 z-50 h-screen w-1/2 sm:w-1/5 "
         >
           <IoCloseCircle
-            className=" absolute right-2 top-5 h-8 w-8 cursor-pointer text-highlight-color"
+            className=" absolute right-2 top-5 h-8 w-8 cursor-pointer text-primary-color"
             onClick={props.toggleNavigationMenu}
           />
           <div className=" relative top-20">

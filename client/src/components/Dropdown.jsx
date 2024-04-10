@@ -8,12 +8,14 @@ export default function Dropdown({ handleLanguageChange, language }) {
   function toggleDropdown() {
     setOpen(!open);
   }
+
+  console.log(language("home.language"));
   const countryList = countries.map((country) => {
     return (
       <div key={country.name}>
         <li
           value={country.id}
-          className="glass-bg flex w-full items-center justify-evenly gap-2 text-white hover:bg-highlight-color"
+          className="glass-bg flex w-full items-center cursor-pointer justify-evenly gap-2 text-neutral-dark hover:bg-primary-color"
           onClick={() => handleLanguageChange(country.name)}
         >
           {country.name}
@@ -26,9 +28,9 @@ export default function Dropdown({ handleLanguageChange, language }) {
 
   return (
     <div className="relative flex items-center justify-center gap-1">
-      <p className="text-light-text"> {language("home.language")} </p>
+      <p className="text-primary-color"> {language("home.language")} </p>
       <IoMdArrowDropdown
-        className=" cursor-pointer text-highlight-color"
+        className=" cursor-pointer text-primary-color"
         onClick={toggleDropdown}
       />
       <div

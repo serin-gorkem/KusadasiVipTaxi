@@ -2,16 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-h1,h2,h3{
-    @apply font-title;
+body{
+    @apply font-body bg-base 
 }
-h4,h5,h6,a {
-    @apply font-subTitle;
-}
-p{
-    @apply font-text;
-}
-
 @layer components {
     .max-container {
         max-width: 1024px;

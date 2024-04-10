@@ -17,6 +17,7 @@ export default function App() {
     i18n.changeLanguage(lang);
   }
 
+
   return (
     <>
       <header>
@@ -36,8 +37,8 @@ export default function App() {
       <section className="relative">
         <Home language={t} handleLanguageChange={handleLanguageChange} />
       </section>
-      <section className="relative bg-secondary-color p-6">
-        <Locations />
+      <section>
+        <Locations language={t} handleLanguageChange={handleLanguageChange} />
       </section>
       <section>
         <ChooseUs />
