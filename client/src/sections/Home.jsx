@@ -1,8 +1,9 @@
 import { RiWhatsappFill } from "react-icons/ri";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import {useState } from "react";
 import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ProgressBar from "../components/ProgressBar";
 
 export default function Home({ language }) {
   const [showPopUp, setShowPopUp] = useState(false);
@@ -73,10 +74,10 @@ export default function Home({ language }) {
         infinite={true}
         autoPlay={true}
         arrows={false}
-        transitionDuration={800}
-        autoPlaySpeed={4100}
+        autoPlaySpeed={4000}
         swipeable={false}
         draggable={false}
+        rewind = {false}
         className="absolute h-screen w-full max-sm:hidden"
       >
         {carouselLandscapeImages.map((image) => {
@@ -95,7 +96,6 @@ export default function Home({ language }) {
         infinite={true}
         autoPlay={true}
         arrows={false}
-        transitionDuration={800}
         autoPlaySpeed={4000}
         swipeable={false}
         draggable={false}
@@ -117,22 +117,22 @@ export default function Home({ language }) {
         <p className="z-10 w-[300px] text-sm md:w-[450px] md:text-xl lg:w-[600px] lg:text-3xl">
           {language("home.slogan")}
         </p>
-        {/* <div className="progress-bar z-10 mt-2 w-full rounded-lg bg-secondary-color justify-self-end">
-          <div className="progress-fill h-2 w-0 animate-progressBar rounded-lg bg-white transition-all duration-1000 ease-in-out sm:h-3"></div>
-        </div> */}
         {showPopUp && (
           <div className="fixed bottom-6 z-10 flex animate-pulse items-center justify-center gap-2 self-end ">
-            <article className="rounded-lg bg-white p-3 font-semibold text-black ">
+            <article className="rounded-lg bg-white p-3 font-semibold text-black hidden xl:block">
               <figure>
                 <figcaption> {language("nav.whatsapp_message")} </figcaption>
               </figure>
             </article>
-            <a href="https://wa.me/">
+            <a href="https://wa.me/+905438083997" className="">
               {/* Enter number after the / */}
-              <RiWhatsappFill className="h-8 w-8 cursor-pointer"></RiWhatsappFill>
+              <RiWhatsappFill className="h-12 w-12 cursor-pointer"></RiWhatsappFill>
             </a>
           </div>
         )}
+      </div>
+      <div className="absolute bottom-0 w-full">
+          <ProgressBar/>
       </div>
     </>
   );

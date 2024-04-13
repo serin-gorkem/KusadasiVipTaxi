@@ -2,15 +2,16 @@
   "nav": {
     "nav_home": "Zuhause",
     "nav_locations": "Standorte",
+    "nav_chooseUs": "Warum wir ?",
     "nav_about": "Über uns",
     "nav_testimonials": "Testimonials",
     "whatsapp_message": "Wie können wir Ihnen helfen?"
   },
   "home": {
     "language": "DE",
-    "title": " WILLKOMMEN IN KUSADASI",
-    "subtitle": "WILLKOMMEN",
-    "slogan": "Reisen Sie bequem und günstig, reisen Sie leicht."
+    "title": " WILLKOMMEN IN ",
+    "subtitle": "KUSADASI",
+    "slogan": "Ihre Reise, Unser Ziel"
   },
   "locations": {
     "heading": "Entdecken Sie unsere Standorte",
@@ -47,5 +48,21 @@
     ],
     "more": "Für weitere Standorte können Sie uns über WhatsApp kontaktieren.",
     "read_more": "Weitere Informationen"
+  },
+  "footer": {
+    "title": "Wir sind",
+    "slogan": "Begib dich mit unserem zuverlässigen Taxi-Service auf unvergessliche Abenteuer",
+    "sub_slogan": "- Ihre Reise, Unser Ziel !",
+    "form_name": "Name (erforderlich)",
+    "form_email": "E-Mail (erforderlich)",
+    "form_help": "Wie können wir Ihnen helfen ? (EN / TR )",
+    "form_button": "Absenden",
+    "home": "Startseite",
+    "locations": "Unsere Standorte",
+    "chooseUs": "Warum wir?",
+    "about": "Über uns",
+    "testimonials": "Kundenmeinungen",
+    "copyright": "Urheberrecht ©",
+    "company": "KusadasiVipTaxi. Alle Rechte vorbehalten."
   }
 }

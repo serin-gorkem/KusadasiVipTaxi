@@ -6,7 +6,7 @@ export default function Navbar(props) {
   return (
     <nav
       aria-label="navigation bar"
-      className="navbar fixed z-10 flex max-container w-full items-center justify-between p-3"
+      className="navbar fixed z-50 flex max-container w-full items-center justify-between p-3"
     >
       <div>
         <img

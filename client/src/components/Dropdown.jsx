@@ -9,13 +9,12 @@ export default function Dropdown({ handleLanguageChange, language }) {
     setOpen(!open);
   }
 
-  console.log(language("home.language"));
   const countryList = countries.map((country) => {
     return (
       <div key={country.name}>
         <li
           value={country.id}
-          className="glass-bg flex w-full items-center cursor-pointer justify-evenly gap-2 text-neutral-dark hover:bg-primary-color"
+          className="glass-bg flex w-full items-center cursor-pointer justify-evenly gap-2 text-neutral hover:bg-primary-color"
           onClick={() => handleLanguageChange(country.name)}
         >
           {country.name}
@@ -39,7 +38,7 @@ export default function Dropdown({ handleLanguageChange, language }) {
       ></div>
       {open && (
         <ul className=" absolute right-0 top-12 w-24 border-r-2 border-r-neutral-400">
-          <div className=" h-[1px] w-full bg-neutral-400 text-neutral-400"></div>
+          <div className=" h-[1px] w-full bg-neutral-400 "></div>
           {countryList}
         </ul>
       )}

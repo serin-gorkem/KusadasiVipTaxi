@@ -43,8 +43,8 @@ export default function Locations({ language }) {
           return <Place key={info.id} id={info.id} changeLocation={changeLocation} title={info.title} />;
         })}
       </div>
-      <div className="information-container max-container flex flex-col lg:flex-row lg:py-8 ">
-        <div className="flex flex-col items-center justify-center gap-2 p-3 lg:w-1/2 lg:py-0">
+      <div className="information-container max-container flex flex-col gap-4 p-6 lg:flex-row lg:py-8 ">
+        <div className="flex flex-col items-center justify-center gap-2 lg:w-1/2 lg:py-0">
           <iframe
             className="h-96 w-full shadow-[0px_4px_4px_rgba(0,0,0,0.25)] lg:h-full "
             aria-label="map"
@@ -53,7 +53,7 @@ export default function Locations({ language }) {
           ></iframe>
           <p className="w-full "> {language(`locations.more`)} </p>
         </div>
-        <div className="flex flex-col p-3 lg:w-1/2">
+        <div className="flex flex-col lg:w-1/2">
           <Slider
             responsive={responsive}
             autoPlay={true}
@@ -73,7 +73,7 @@ export default function Locations({ language }) {
             })}
           </Slider>
           <p>{language(`locations.info_text.${currentLocationIndex}.text`)} </p>
-          <button className=" my-4 flex h-8 w-28 md:h-12 md:w-36 items-center justify-center self-center rounded-lg bg-primary-color px-6 py-2 shadow-lg hover:text-neutral active:shadow-inner">
+          <button className=" my-4 flex h-8 w-fit  md:h-12  items-center justify-center self-center rounded-lg bg-primary-color px-6 py-2 shadow-lg hover:text-neutral active:shadow-inner">
             <a href={data.readMore} className="text-[10px] md:text-[14px] font-semibold">
               {language(`locations.read_more`)}
             </a>
