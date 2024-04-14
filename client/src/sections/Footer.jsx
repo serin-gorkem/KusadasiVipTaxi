@@ -77,8 +77,7 @@ export default function Footer(props) {
             logo={
               <FaLocationDot className="h-3 w-3 md:h-5 md:w-5 lg:h-6 lg:w-6" />
             }
-            info="Cumhuriyet, Kadir Kırhan Sk. 1a, 09460 Kuşadası/Aydın"
-            url="https://maps.app.goo.gl/Xv1QNDWTsP44VvGY9"
+            info="Kuşadası, Merkez"
           />
         </div>
       </div>
@@ -126,7 +125,7 @@ export default function Footer(props) {
         </div>
         <form
           className="m-0"
-          action="https://formspree.io/f/xoqgprwd"
+          action="https://formspree.io/f/myyrbvan"
           method="POST"
         >
           <input

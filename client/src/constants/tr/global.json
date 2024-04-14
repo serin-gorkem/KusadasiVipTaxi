@@ -49,6 +49,33 @@
     "more": "Daha fazla konum için bizimle whatsapp üzerinden iletişime geçebilirsiniz.",
     "read_more": "Detaylı bilgi"
   },
+  "choose_us": {
+    "heading": "Neden Bizi Tercih Etmelisiniz ? ",
+    "sub_heading": "En iyisini sunuyoruz",
+    "facts": [
+      {
+        "id": "1",
+        "title": "Güvenilir Hizmet ",
+        "description": "Müşterilerimize güvenilir bir ulaşım hizmeti sunuyoruz. Yolcularımızın güvenliği ve konforu her zaman önceliğimizdir."
+      },
+      {
+        "id": "2",
+        "title": "Profesyonel Şoförler  ",
+        "description": "Deneyimli ve profesyonel şoförlerimizle, müşterilerimize her zaman en iyi hizmeti sunmak için buradayız. Yolculuklarınızı keyifli ve sorunsuz bir şekilde tamamlamak için elimizden geleni yapıyoruz."
+      },
+      {
+        "id": "3",
+        "title": "Uygun Fiyatlar  ",
+        "description": "Rekabetçi fiyatlarımızla, müşterilerimize ekonomik bir seyahat seçeneği sunuyoruz. Kaliteli hizmetimizden ödün vermeden, bütçenizi koruyarak güvenilir bir taşıma deneyimi yaşamanızı sağlıyoruz."
+      }
+    ]
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "subtitle": "Merhaba benim adım Mustafa ...",
+    "read_more": "Daha fazla oku",
+    "description": "Merhaba benim adım Mustafa, 10 yılı aşkın süredir seyahat deneyiminizi kolaylaştırmak ve daha keyifli hale getirmek için buradayız. Seyahat etmeyi daha fazla eğlenceli ve pratik hale getirmek için yola çıktık. Müşterilerimize konforlu ve güvenilir bir ulaşım deneyimi sunmayı amaçlıyoruz."
+  },
   "footer": {
     "title": "Biz",
     "slogan": "Güvenilir Taksi Servisimizle Unutulmaz Maceralara Yelken Açın",

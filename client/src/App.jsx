@@ -2,12 +2,14 @@ import { useTranslation } from "react-i18next";
 import Home from "./sections/Home";
 import Locations from "./sections/Locations";
 import Navbar from "./components/Navbar";
-import { useRef, useState } from "react";
+import {useRef, useState } from "react";
 import NavigationMenu from "./components/NavigationMenu";
 import ChooseUs from "./sections/ChooseUs";
 import About from "./sections/About";
 import Footer from "./sections/Footer";
 import Testimonials from "./sections/Testimonials";
+import Reveal from "./components/Reveal";
+
 
 export default function App() {
   const [t, i18n] = useTranslation("global");
@@ -18,7 +20,7 @@ export default function App() {
   const chooseUsRef = useRef(null);
   const aboutRef = useRef(null);
   const testimonialsRef = useRef(null);
-
+  
   function toggleNavigationMenu() {
     setOpen(!open);
   }
@@ -26,8 +28,10 @@ export default function App() {
     i18n.changeLanguage(lang);
   }
 
+
   return (
     <>
+      {/* <LoadingScreen ref={loadingRef} /> */}
       <header>
         <div className="max-container">
           <Navbar
@@ -48,19 +52,19 @@ export default function App() {
         />
       </header>
       <section className="relative" ref={homeRef}>
-        <Home language={t} handleLanguageChange={handleLanguageChange} />
+        <Home language={t} />
       </section>
       <section ref={locationsRef}>
-        <Locations language={t} handleLanguageChange={handleLanguageChange} />
+        <Locations language={t} Reveal={Reveal} />
       </section>
       <section ref={chooseUsRef}>
-        <ChooseUs />
+        <ChooseUs language={t} Reveal={Reveal} />
       </section>
       <section ref={aboutRef}>
-        <About />
+        <About language={t} Reveal={Reveal} />
       </section>
       <section ref={testimonialsRef}>
-        <Testimonials />
+        <Testimonials language={t} Reveal={Reveal} />
       </section>
       <section>
         <Footer
@@ -70,7 +74,6 @@ export default function App() {
           about={aboutRef}
           testimonials={testimonialsRef}
           language={t}
-          handleLanguageChange={handleLanguageChange}
         />
       </section>
     </>

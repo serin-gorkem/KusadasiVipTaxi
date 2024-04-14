@@ -19,7 +19,8 @@ export default {
         "body":['Palanquin'],
       },
       animation:{
-        "progressBar": 'fill-progress-bar 4s infinite '
+        "progressBar": 'fill-progress-bar 4s infinite',
+        "disappear" : 'disappear-element 0.5s linear alternate forwards'
       },
       keyframes : {
         "fill-progress-bar" : {
@@ -29,7 +30,15 @@ export default {
           "100%":{
             "width":"100%"
           }
-        }
+        },
+        "disappear-element" :{
+          "0%":{
+            "opacity":"1"
+          },
+          "100%":{
+            "opacity":"0"
+          }
+        }   
       }
     },
   },

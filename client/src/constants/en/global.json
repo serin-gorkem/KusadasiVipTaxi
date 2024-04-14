@@ -49,20 +49,47 @@
     "more": "You can contact us via WhatsApp for more locations.",
     "read_more": "More Information"
   },
-  "footer":{
-    "title" : "We are",
+  "choose_us": {
+    "heading": "Why Choose Us?",
+    "sub_heading": "We Offer the Best",
+    "facts": [
+      {
+        "id": "1",
+        "title": "Reliable Service",
+        "description": "We provide our customers with reliable transportation services. The safety and comfort of our passengers are always our top priority."
+      },
+      {
+        "id": "2",
+        "title": "Professional Drivers",
+        "description": "With experienced and professional drivers, we are here to provide our customers with the best service possible. We strive to make your journeys enjoyable and hassle-free."
+      },
+      {
+        "id": "3",
+        "title": "Affordable Prices",
+        "description": "With competitive prices, we offer our customers an economical travel option. We ensure a reliable transportation experience while keeping your budget in mind."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Hello, my name is Mustafa ...",
+    "read_more": "Read more",
+    "description": "Hello, my name is Mustafa, and We here to make your travel experience easier and more enjoyable for over 10 years. We embarked on a journey to make traveling more fun and convenient. Our aim is to provide our customers with a comfortable and reliable transportation experience."
+  },
+  "footer": {
+    "title": "We are",
     "slogan": "Embark on Unforgettable Adventures with Our Reliable Taxi Service",
-    "sub_slogan":"- Your Journey, Our Destination ! ",
+    "sub_slogan": "- Your Journey, Our Destination ! ",
     "form_name": "Name (required)",
-    "form_email":"Email (required)",
-    "form_help":"How can we help you ? (EN / TR ) ",
-    "form_button":"Submit",
-    "home":"Home Page",
-    "locations":" Our Locations",
-    "chooseUs":" Why choose us ?  ",
-    "about":" About Us",
-    "testimonials":" Testimonials",
+    "form_email": "Email (required)",
+    "form_help": "How can we help you ? (EN / TR ) ",
+    "form_button": "Submit",
+    "home": "Home Page",
+    "locations": " Our Locations",
+    "chooseUs": " Why choose us ?  ",
+    "about": " About Us",
+    "testimonials": " Testimonials",
     "copyright": "Copyright ©",
-    "company" : "KusadasiVipTaxi. All rights reserved."
+    "company": "KusadasiVipTaxi. All rights reserved."
   }
 }

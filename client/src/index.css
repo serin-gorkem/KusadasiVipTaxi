@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    @apply font-body bg-base 
+    @apply font-body bg-base    
 }
 @layer components {
     .max-container {

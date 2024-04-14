@@ -17,11 +17,11 @@
       },
       {
         "id": 4,
-        "url": "https://images.unsplash.com/photo-1579962792183-adfca20b6598?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/29/87/e9/efes-antik-kenti-tiyatrosu.jpg?w=800&h=-1&s=1"
       }
     ],
     "mapURL": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d100742.55762411222!2d27.238472408313836!3d37.902272527871936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x14bea92b956a5427%3A0xd89b725d100f2ef4!2zS3XFn2FkYXPEsSwgQXlkxLFu!3m2!1d37.857912999999996!2d27.261015!4m5!1s0x14bead48f0b30447%3A0xd0fbf18a0924b6f8!2sAtat%C3%BCrk%2C%20Efes%20Antik%20Kenti%2C%20Efes%20Harabeleri%2C%2035920%20Sel%C3%A7uk%2F%C4%B0zmir!3m2!1d37.9409263!2d27.341457899999998!5e0!3m2!1str!2str!4v1711875783813!5m2!1str!2str",
-    "readMore": "https://www.bizevdeyokuz.com/efes-antik-kenti/"
+    "readMore": "https://en.wikipedia.org/wiki/Ephesus"
   },
   {
     "id": "1",
@@ -41,7 +41,7 @@
       }
     ],
     "mapURL": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d100742.55762411222!2d27.238472408313836!3d37.902272527871936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x14bea92b956a5427%3A0xd89b725d100f2ef4!2zS3XFn2FkYXPEsSwgQXlkxLFu!3m2!1d37.857912999999996!2d27.261015!4m5!1s0x14bead0a3e862cf1%3A0x2a331e0fe92e6c9d!2sSultaniye%2C%20Meryem%20Ana%20Evi%2C%20Sel%C3%A7uk%2F%C4%B0zmir!3m2!1d37.911722999999995!2d27.3341633!5e0!3m2!1str!2str!4v1711876040379!5m2!1str!2str",
-    "readMore": "https://www.hzmeryemanaevi.com/"
+    "readMore": "https://www.hzmeryemanaevi.com/en/"
   },
   {
     "id": "2",
@@ -49,19 +49,20 @@
     "images": [
       {
         "id": 8,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/02/85/8e/09/filename-p1020643-jpg.jpg"
+        "url": "https://c0.wallpaperflare.com/preview/504/847/625/sirince-village-nature-houses.jpg"
       },
       {
         "id": 9,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/21/71/2a/34/sirince-koyu.jpg"
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/14/92/f4/2a/kilise-sirince-selcuk.jpg"
+        
       },
       {
         "id": 10,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/21/6f/41/f7/sirince.jpg"
+        "url": "https://seyler.ekstat.com/img/max/800/s/sb2pn8PlzK5cadCK-637677489778287853.jpg"
       }
     ],
     "mapURL": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d100466.55061673721!2d27.23847260326339!3d37.90227252800786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x14bea92b956a5427%3A0xd89b725d100f2ef4!2zS3XFn2FkYXPEsSwgQXlkxLFu!3m2!1d37.857912999999996!2d27.261015!4m5!1s0x14b94cbfaf360b85%3A0x37a5b8ca1efaa11c!2zxZ5pcmluY2UsIFNlbMOndWsvxLB6bWly!3m2!1d37.944100999999996!2d27.431625!5e0!3m2!1str!2str!4v1711966777220!5m2!1str!2str",
-    "readMore": "https://www.bizevdeyokuz.com/sirince-gezilecek-yerler"
+    "readMore": "https://en.wikipedia.org/wiki/%C5%9Eirince"
   },
   {
     "id": "3",
@@ -69,7 +70,7 @@
     "images": [
       {
         "id": 11,
-        "url": "https://www.altinkumsahilemlak.com/tr/img-sayfa/236-didim-fotograflari.webp"
+        "url": "https://www.kulturportali.gov.tr/contents/images/Didim%20Apollon%20(1).jpg"
       },
       {
         "id": 12,
@@ -81,7 +82,7 @@
       }
     ],
     "mapURL": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d260435.7407957687!2d27.219127647510746!3d37.81479492929143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x14bea92b956a5427%3A0xd89b725d100f2ef4!2zS3XFn2FkYXPEsSwgQXlkxLFu!3m2!1d37.857912999999996!2d27.261015!4m5!1s0x14be86d2ad80ec37%3A0x330796f2c071da8d!2zRGlkaW0sIEF5ZMSxbg!3m2!1d37.376093999999995!2d27.264729!5e0!3m2!1str!2str!4v1711967822545!5m2!1str!2str",
-    "readMore": "https://www.tatilsepeti.com/didim-sehir-rehberi"
+    "readMore": "https://en.wikipedia.org/wiki/Didim"
   },
   {
     "id": "4",
@@ -89,19 +90,19 @@
     "images": [
       {
         "id": 14,
-        "url": "https://www.izmir.bel.tr/YuklenenDosyalar/Fotograflar/Orta/21112017_14818_0.JPG"
+        "url": "https://www.viago.com.tr/dosya/2928/blog/4-1-izmir-havalimani_464.webp"
       },
       {
         "id": 15,
-        "url": "https://images.unsplash.com/photo-1583060245154-083ff3f59b53?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "url": "https://images.unsplash.com/photo-1583062482441-aa1124142248?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
       {
         "id": 16,
-        "url": "https://images.unsplash.com/photo-1583062482441-aa1124142248?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "url": "https://images.unsplash.com/photo-1583060245154-083ff3f59b53?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       }
     ],
     "mapURL": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d212543.97391451203!2d27.208870553399674!3d37.83588562353098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x14bea92b956a5427%3A0xd89b725d100f2ef4!2zS3XFn2FkYXPEsSwgQXlkxLFu!3m2!1d37.857912999999996!2d27.261015!4m5!1s0x14bbd862a762cacd%3A0x628cbba1a59ce8fe!2zxLB6bWly!3m2!1d38.423733999999996!2d27.142826!5e0!3m2!1str!2str!4v1711968391698!5m2!1str!2str",
-    "readMore": "https://www.englishcentral.com/blog/izmir-ingilizce-ve-turkce-tanitimi/"
+    "readMore": "https://en.wikipedia.org/wiki/%C4%B0zmir"
   },
   {
     "id": "5",
@@ -113,15 +114,15 @@
       },
       {
         "id": 18,
-        "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/4b/b2/ae/dilek-yarimadasi-milli.jpg?w=1200&h=-1&s=1"
+        "url": "https://aydinda.com/wp-content/uploads/2020/04/kusadasi-dilek-yarimadasi-milli-parki.jpg"
       },
       {
         "id": 19,
-        "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/41/5a/43/dilek-national-park.jpg?w=1200&h=-1&s=1"
+        "url": "http://www.güzelçamlı.com/media/k2/items/cache/97aa066dcc42404e7602768333af5659_XL.jpg"
       }
     ],
     "mapURL": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d220421.5125731379!2d27.21128434603202!3d37.83569498894733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x14bea92b956a5427%3A0xd89b725d100f2ef4!2zS3XFn2FkYXPEsSwgQXlkxLFu!3m2!1d37.857912999999996!2d27.261015!4m5!1s0x14bea07678dfcc5f%3A0xe8b4cdb4c01fec35!2zR8O8emVsw6dhbWzEsSwgTWlsbGkgUGFyaywgS3XFn2FkYXPEsS9BeWTEsW4!3m2!1d37.6987966!2d27.1797038!5e0!3m2!1str!2str!4v1711969517666!5m2!1str!2str",
-    "readMore": "https://www.englishcentral.com/blog/izmir-ingilizce-ve-turkce-tanitimi/"
+    "readMore": "https://en.wikipedia.org/wiki/%C4%B0zmir"
   },
   {
     "id": "6",
@@ -133,14 +134,14 @@
       },
       {
         "id": 18,
-        "url": "https://www.dhmi.gov.tr/Lists/AnaSayfaSlider_Havalimani/Attachments/651/web.png"
+        "url": "https://staticb.yolcu360.com/blog/wp-content/uploads/2018/06/28202349/Bodrum-G%C3%B6rselleri-2-1024x640.jpg"
       },
       {
         "id": 19,
-        "url": "https://www.dhmi.gov.tr/Lists/AnaSayfaSlider_Havalimani/Attachments/654/web.png"
+        "url": "https://www.kulturportali.gov.tr/contents/images/Bodrum%20Sualt%20Arkeoloji%20M%c3%bczesi%20-%20Bodrum%20Kalesi%20(1).jpg"
       }
     ],
     "mapURL": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d615403.9919650321!2d27.16646422493751!3d37.6217356050177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x14bea92b956a5427%3A0xd89b725d100f2ef4!2zS3XFn2FkYXPEsSwgQXlkxLFu!3m2!1d37.857912999999996!2d27.261015!4m5!1s0x14bef6172e26d41d%3A0x983b69b4d84b63d2!2sEkinanbar%C4%B1%2C%20Milas-Bodrum%20Havaliman%C4%B1%20(BJV)%2C%20Havaliman%C4%B1%20Sokak%2C%20Milas%2FMu%C4%9Fla!3m2!1d37.248656!2d27.6639925!5e0!3m2!1str!2str!4v1711969769549!5m2!1str!2str",
-    "readMore": "https://tr.wikipedia.org/wiki/Bodrum,_Mu%C4%9Fla"
+    "readMore": "https://en.wikipedia.org/wiki/Bodrum "
   }
 ]

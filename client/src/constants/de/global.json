@@ -49,6 +49,33 @@
     "more": "Für weitere Standorte können Sie uns über WhatsApp kontaktieren.",
     "read_more": "Weitere Informationen"
   },
+  "choose_us": {
+    "heading": "Warum Uns Wählen?",
+    "sub_heading": "Wir Bieten das Beste",
+    "facts": [
+      {
+        "id": "1",
+        "title": "Verlässlicher Service ",
+        "description": "Unser Unternehmen steht für einen verlässlichen Transportdienst, bei dem die Sicherheit und der Komfort unserer Passagiere stets oberste Priorität haben."
+      },
+      {
+        "id": "2",
+        "title": "Professionelle Fahrer",
+        "description": "Mit einem Team aus erfahrenen und professionellen Fahrern streben wir danach, unseren Kunden stets den bestmöglichen Service zu bieten, um ihre Reisen angenehm und problemlos zu gestalten."
+      },
+      {
+        "id": "3",
+        "title": "Erschwingliche Preise",
+        "description": "Mit unseren wettbewerbsfähigen Preisen bieten wir unseren Kunden eine kostengünstige Reisemöglichkeit. Wir ermöglichen es Ihnen, eine zuverlässige Transporterfahrung zu genießen, ohne dabei die Qualität unseres Services zu beeinträchtigen und Ihr Budget zu schonen."
+      }
+    ]
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Hallo, mein Name ist Mustafa ...",
+    "read_more": "Mehr lesen",
+    "description": "Hallo, mein Name ist Mustafa seit mehr als einem Jahrzehnt widmen wir uns der Vereinfachung und Verbesserung Ihrer Reiseerfahrung. Unser Ziel ist es, das Reisen viel angenehmer und praktischer zu gestalten, indem wir unseren Kunden einen komfortablen und zuverlässigen Transport bieten."
+  },
   "footer": {
     "title": "Wir sind",
     "slogan": "Begib dich mit unserem zuverlässigen Taxi-Service auf unvergessliche Abenteuer",

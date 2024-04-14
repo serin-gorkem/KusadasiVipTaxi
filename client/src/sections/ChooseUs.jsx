@@ -1,39 +1,55 @@
 import Facts from "../components/Facts";
+import FactAnim01 from "../assets/ThumbsUp.json";
+import FactAnim02 from "../assets/TaxiMan.json";
+import FactAnim03 from "../assets/Price.json";
+import PropTypes from "prop-types";
 
-export default function ChooseUs() {
-  const images = [
+export default function ChooseUs({Reveal,language}) {
+  const animations = [
     {
-      src: "https://images.unsplash.com/photo-1582578598774-a377d4b32223?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "image",
+      id: "0",
+      source: FactAnim01,
     },
     {
-      src: "https://images.unsplash.com/photo-1421091242698-34f6ad7fc088?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "image",
+      id: "1",
+      source: FactAnim02,
     },
     {
-      src: "https://plus.unsplash.com/premium_photo-1681497587542-b502f7b67590?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "image",
+      id: "2",
+      source: FactAnim03,
     },
   ];
   return (
     <>
-      <div className="relative ">
+      <div className="relative overflow-hidden ">
         <div className="absolute h-[100%] w-full bg-[url('https://images.unsplash.com/photo-1514041181368-bca62cceffcd?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-fixed bg-center bg-no-repeat "></div>
         <div className="absolute h-[100%] w-full bg-gradient-to-b from-transparent to-black  "></div>
-        <div className="max-container top-0 flex w-full flex-col items-start p-6 text-white ">
-          <h1 className="text-xl sm:text-2xl relative">Neden Bizi Tercih Etmelisiniz?</h1>
-          <h2 className="text-lg sm:text-5xl font-bold relative ">En iyisini sunuyoruz</h2>
-          {images.map((image) => {
-            return(
-              <Facts
-                key={image.src}
-                url={image.src}
-                alt={image.alt}
-              />
-            )
+        <div
+          className="max-container top-0 flex w-full flex-col items-start p-6 text-white"
+        >
+        <Reveal>
+          <h1 className="relative text-xl sm:text-2xl">
+          {language("choose_us.heading")}
+          </h1>
+        </Reveal>
+        <Reveal>
+          <h2 className="relative text-lg font-bold sm:text-5xl ">
+          {language("choose_us.sub_heading")}   
+          </h2>
+        </Reveal>
+          {animations.map((animation) => {
+            return (
+              <Reveal key={animation.id} >
+                <Facts factAnimation={animation.source} title={language(`choose_us.facts.${animation.id}.title`)} description={language(`choose_us.facts.${animation.id}.description`)} />
+              </Reveal>
+            );
           })}
         </div>
       </div>
     </>
   );
+}
+ChooseUs.propTypes = {
+  Reveal: PropTypes.func.isRequired,
+  language: PropTypes.func.isRequired,
 }
