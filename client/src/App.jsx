@@ -28,10 +28,8 @@ export default function App() {
     i18n.changeLanguage(lang);
   }
 
-
   return (
     <>
-      {/* <LoadingScreen ref={loadingRef} /> */}
       <header>
         <div className="max-container">
           <Navbar

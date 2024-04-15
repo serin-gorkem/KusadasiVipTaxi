@@ -3,8 +3,8 @@ import placeInfo from "../constants/Locations/Info.json";
 import { useState } from "react";
 import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Lottie from "lottie-react";
-import TaxiAnimation from "../assets/Taxi.json";
+// import Lottie from "lottie-react";
+// import TaxiAnimation from "../assets/Taxi.json";
 
 export default function Locations({ language, Reveal }) {
   const [currentLocationIndex, setCurrentLocationIndex] = useState(0);
@@ -44,12 +44,12 @@ export default function Locations({ language, Reveal }) {
             </h2>
           </Reveal>
         </div>
-        <Lottie
+        {/* <Lottie
           animationData={TaxiAnimation}
           autoplay={true}
           loop={true}
           className=" h-44 w-44"
-        />
+        /> */}
       </div>
       <div
         aria-label="location titles"
