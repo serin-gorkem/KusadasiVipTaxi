@@ -1,0 +1,17 @@
+[
+  {
+    "name": "TR",
+    "iconURL": "http://purecatamphetamine.github.io/country-flag-icons/3x2/TR.svg",
+    "alt": "Turkish flag"
+  },
+  {
+    "name": "EN",
+    "iconURL": "http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg",
+    "alt": "England flag"
+  },
+  {
+    "name": "DE",
+    "iconURL": "http://purecatamphetamine.github.io/country-flag-icons/3x2/DE.svg",
+    "alt": "Germany flag"
+  }
+]

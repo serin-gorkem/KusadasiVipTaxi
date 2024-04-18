@@ -2,9 +2,6 @@ import { useTranslation } from "react-i18next";
 import { lazy, memo, useRef } from "react";
 import { I18nProvider } from "./i18nContext";
 
-/*Sections */
-// import Header from "./sections/Header";
-
 import Home from "./sections/Home";
 const Header = lazy(() => import("./sections/Header"));
 const Locations = lazy(() => import("./sections/Locations"));
@@ -12,6 +9,8 @@ const ChooseUs = lazy(() => import("./sections/ChooseUs"));
 const About = lazy(() => import("./sections/About"));
 const Footer = lazy(() => import("./sections/Footer"));
 const Testimonials = lazy(() => import("./sections/Testimonials"));
+
+const SlideIn = lazy(() => import("./components/SlideIn"));
 
 const App = memo(function App() {
   const [t, i18n] = useTranslation("global");
@@ -31,19 +30,19 @@ const App = memo(function App() {
           </header>
           <main>
             <section ref={refs.home}>
-              <Home />
+            <Home/>
             </section>
             <section ref={refs.locations}>
-              <Locations />
+              <Locations SlideIn={SlideIn} />
             </section>
             <section ref={refs.chooseUs}>
-              <ChooseUs />
+              <ChooseUs SlideIn={SlideIn} />
             </section>
             <section ref={refs.about}>
-              <About />
+              <About SlideIn={SlideIn} />
             </section>
             <section ref={refs.testimonials}>
-              <Testimonials />
+              <Testimonials SlideIn={SlideIn} />
             </section>
           </main>
           <footer>

@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import { memo, useState } from "react";
 import { useI18n } from "../i18nContext";
 
-
-
 const Footer = memo(function Footer() {
   const [formData, setFormData] = useState({
     name: "",

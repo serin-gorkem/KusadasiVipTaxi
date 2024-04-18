@@ -21,7 +21,15 @@ body{
     backdrop-filter: blur(14.5px);
     -webkit-backdrop-filter: blur(14.5px);
 }
-
+#TA_selfserveprop588{
+}
+.widSSP{
+}
+@media not all and (min-width: 640px) {
+    .widSSP{
+        width: 100% !important;
+    }
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus

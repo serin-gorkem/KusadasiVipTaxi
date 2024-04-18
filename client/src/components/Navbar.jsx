@@ -1,8 +1,9 @@
 import Dropdown from "./Dropdown";
 import { RiMenu3Fill } from "react-icons/ri";
 import PropTypes from "prop-types";
+import { memo } from "react";
 
-export default function Navbar(props) {
+const Navbar = memo(function Navbar(props) {
   return (
     <nav
       aria-label="navigation bar"
@@ -27,10 +28,12 @@ export default function Navbar(props) {
       </div>
     </nav>
   );
-}
+});
 
 Navbar.propTypes = {
   toggleNavigationMenu: PropTypes.func,
   handleLanguageChange: PropTypes.func,
   language: PropTypes.func,
 };
+
+export default Navbar;

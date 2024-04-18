@@ -1,5 +1,5 @@
 import { RiWhatsappFill } from "react-icons/ri";
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProgressBar from "../components/ProgressBar";
@@ -29,9 +29,11 @@ const Home = memo(function Home() {
   const [showPopUp, setShowPopUp] = useState(false);
   const i18nData = useI18n();
 
-  setTimeout(() => {
-    setShowPopUp(true);
-  }, 10000);
+  useEffect(() => {
+    setTimeout(() => {
+      setShowPopUp(true);
+    }, 1000);
+  }, []);
 
   return (
     <div className=" relative">
@@ -52,7 +54,6 @@ const Home = memo(function Home() {
               key={image.id}
               src={image.src}
               className="h-screen w-full object-cover"
-              loading="lazy"
             />
           );
         })}
@@ -75,7 +76,6 @@ const Home = memo(function Home() {
               key={image.id}
               src={image.src}
               className="h-screen w-full object-cover"
-              loading="lazy"
             />
           );
         })}
@@ -85,19 +85,18 @@ const Home = memo(function Home() {
           {i18nData("home.title")}
         </h1>
 
-        <h2 className="font-regular z-10 mb-4 text-3xl md:text-4xl lg:text-6xl ">
+        <h2 className="font-regular z-10 mb-4 text-3xl md:text-4xl lg:text-6xl  ">
           {i18nData("home.subtitle")}
         </h2>
 
-        <p className="z-10 w-[300px] text-sm md:w-[450px] md:text-xl lg:w-[600px] lg:text-3xl">
+        <p className="z-10 w-[300px] text-sm md:w-[450px] md:text-xl lg:w-[600px] lg:text-2xl ">
           {i18nData("home.slogan")}
         </p>
-
         {showPopUp && (
           <div className="fixed bottom-6 z-10 flex animate-pulse items-center justify-center gap-2 self-end ">
             <article className="hidden rounded-lg bg-white p-3 font-semibold text-black xl:block">
               <figure>
-                <figcaption> {i18nData("nav.whatsapp_message")} </figcaption>
+                <figcaption>{i18nData("nav.whatsapp_message")} </figcaption>
               </figure>
             </article>
             <a href="https://wa.me/+905438083997" className="">

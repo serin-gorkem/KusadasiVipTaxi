@@ -2,8 +2,9 @@ import { IoCloseCircle } from "react-icons/io5";
 import { RiArrowDropRightLine } from "react-icons/ri";
 import PropTypes from "prop-types";
 import { useI18n } from "../i18nContext";
+import { memo } from "react";
 
-export default function NavigationMenu(props) {
+const NavigationMenu = memo(function NavigationMenu(props) {
   const i18nData = useI18n();
 
   const menuElementStrings = [
@@ -66,9 +67,11 @@ export default function NavigationMenu(props) {
       )}
     </>
   );
-}
+});
 NavigationMenu.propTypes = {
   open: PropTypes.bool,
   toggleNavigationMenu: PropTypes.func,
   refs: PropTypes.object,
 };
+
+export default NavigationMenu;

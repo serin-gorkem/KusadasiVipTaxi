@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import PropTypes from "prop-types";
 import { useI18n } from "../i18nContext";
+import countries from "../constants/Flags.json";
 
-export default function Dropdown({ handleLanguageChange }) {
+const Dropdown = memo(function Dropdown({ handleLanguageChange }) {
   const [isOpen, setIsOpen] = useState(false);
   const i18nData = useI18n();
 
@@ -46,29 +47,10 @@ export default function Dropdown({ handleLanguageChange }) {
       )}
     </div>
   );
-}
+});
 
 Dropdown.propTypes = {
   handleLanguageChange: PropTypes.func.isRequired,
 };
 
-const countries = [
-  {
-    name: "TR",
-    iconURL:
-      "http://purecatamphetamine.github.io/country-flag-icons/3x2/TR.svg",
-    alt: "Turkish flag",
-  },
-  {
-    name: "EN",
-    iconURL:
-      "http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg",
-    alt: "England flag",
-  },
-  {
-    name: "DE",
-    iconURL:
-      "http://purecatamphetamine.github.io/country-flag-icons/3x2/DE.svg",
-    alt: "Germany flag",
-  },
-];
+export default Dropdown;

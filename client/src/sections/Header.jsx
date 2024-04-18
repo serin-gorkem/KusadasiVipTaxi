@@ -1,8 +1,11 @@
-import { memo, useState } from "react";
+import { Suspense, lazy, memo, useState } from "react";
 import PropTypes from "prop-types";
 
-import Navbar from "../components/Navbar";
-import NavigationMenu from "../components/NavigationMenu";
+// import Navbar from "../components/Navbar";
+// import NavigationMenu from "../components/NavigationMenu";
+
+const Navbar = lazy(() => import("../components/Navbar"));
+const NavigationMenu = lazy(() => import("../components/NavigationMenu"));
 
 const Header = memo(function Header({ refs, i18n }) {
   const [open, setOpen] = useState(false);
@@ -14,17 +17,19 @@ const Header = memo(function Header({ refs, i18n }) {
   }
   return (
     <>
-      <div className="max-container">
-        <Navbar
+      <Suspense fallback={<h2>🌀 Loading...</h2>}>
+        <div className="max-container">
+          <Navbar
+            toggleNavigationMenu={toggleNavigationMenu}
+            handleLanguageChange={handleLanguageChange}
+          />
+        </div>
+        <NavigationMenu
+          open={open}
           toggleNavigationMenu={toggleNavigationMenu}
-          handleLanguageChange={handleLanguageChange}
+          refs={refs}
         />
-      </div>
-      <NavigationMenu
-        open={open}
-        toggleNavigationMenu={toggleNavigationMenu}
-        refs={refs}
-      />
+      </Suspense>
     </>
   );
 });

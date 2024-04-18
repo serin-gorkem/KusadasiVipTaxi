@@ -1,15 +1,12 @@
 import PropTypes from "prop-types";
 import placeInfo from "../constants/Locations/Info.json";
 import { Suspense, memo, useRef, useState } from "react";
-// import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useI18n } from "../i18nContext";
-// import Lottie from "lottie-light-react";
-import TaxiAnimation from "../animations/Taxi.json";
 import { lazy } from "react";
 
 const Slider = lazy(() => import("react-multi-carousel"));
-const Lottie = lazy(() => import("lottie-light-react"));
+const Place = lazy(() => import("../components/Place"));
 
 const responsive = {
   desktop: {
@@ -25,7 +22,8 @@ const responsive = {
     items: 1,
   },
 };
-const Locations = memo(function Locations() {
+
+const Locations = memo(function Locations({ SlideIn }) {
   const currentLocationIndexRef = useRef(0);
   const [currentLocation, setCurrentLocation] = useState(
     placeInfo[currentLocationIndexRef.current],
@@ -40,39 +38,35 @@ const Locations = memo(function Locations() {
     <div className="items-center justify-center lg:flex lg:flex-col">
       <div className="flex flex-col items-center justify-center sm:flex-row">
         <div>
-          <h1 className=" text-center text-[28px] font-bold text-neutral-dark lg:text-[40px] ">
-            {i18nData("locations.heading")}
-          </h1>
-
-          <h2 className=" text-center text-[14px] font-semibold text-neutral-dark lg:text-[20px]  ">
-            {i18nData("locations.subheading")}
-          </h2>
+          <SlideIn>
+            <h1 className=" text-center text-[28px] font-bold text-neutral-dark lg:text-[40px] ">
+              {i18nData("locations.heading")}
+            </h1>
+          </SlideIn>
+          <SlideIn>
+            <h2 className=" text-center text-[14px] font-semibold text-neutral-dark lg:text-[20px]  ">
+              {i18nData("locations.subheading")}
+            </h2>
+          </SlideIn>
         </div>
-        <Suspense fallback={<h2>🌀 Loading...</h2>}>
-          <Lottie
-            animationData={TaxiAnimation}
-            autoplay={true}
-            loop={true}
-            className=" h-44 w-44"
-          />
-        </Suspense>
       </div>
-      <div
-        aria-label="location titles"
-        className="grid grid-cols-3 place-items-center gap-4 overflow-hidden p-4 md:grid-cols-8 lg:z-20 lg:w-[1000px] lg:[&>*:nth-child(5)]:col-start-2 "
-      >
-        {placeInfo.map((info) => {
-          return (
-            <Place
-              key={info.id}
-              id={info.id}
-              changeLocation={handleChangeLocation}
-              title={info.title}
-            />
-          );
-        })}
-      </div>
-
+      <SlideIn>
+        <div
+          aria-label="location titles"
+          className="grid grid-cols-3 place-items-center gap-4 overflow-hidden p-4 md:grid-cols-8 lg:z-20 lg:w-[1000px] lg:[&>*:nth-child(5)]:col-start-2 "
+        >
+          {placeInfo.map((info) => {
+            return (
+              <Place
+                key={info.id}
+                id={info.id}
+                changeLocation={handleChangeLocation}
+                title={info.title}
+              />
+            );
+          })}
+        </div>
+      </SlideIn>
       <div className="information-container max-container flex flex-col gap-4 p-6 lg:flex-row lg:py-8 ">
         <div className="flex flex-col items-center justify-center gap-2 lg:w-1/2 lg:py-0">
           <iframe
@@ -104,12 +98,13 @@ const Locations = memo(function Locations() {
               })}
             </Slider>
           </Suspense>
-          <p>
-            {i18nData(
-              `locations.info_text.${currentLocationIndexRef.current}.text`,
-            )}
-          </p>
-
+          <SlideIn>
+            <p>
+              {i18nData(
+                `locations.info_text.${currentLocationIndexRef.current}.text`,
+              )}
+            </p>
+          </SlideIn>
           <button className=" my-4 flex h-8 w-fit  items-center  justify-center self-center rounded-lg bg-primary-color px-6 py-2 shadow-lg hover:text-neutral active:shadow-inner md:h-12">
             <a
               href={currentLocation.readMore}
@@ -124,22 +119,7 @@ const Locations = memo(function Locations() {
   );
 });
 
-const Place = memo(function Place({ title, id, changeLocation }) {
-  return (
-    <div
-      className="flex h-8 w-24 cursor-pointer items-center justify-center rounded-lg bg-base p-2 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] hover:bg-primary-color active:bg-primary-color md:col-span-2 md:h-12 md:w-32 lg:w-36"
-      onClick={() => changeLocation(id)}
-    >
-      <p className=" text-center text-[13px] text-neutral-dark lg:text-[18px]">
-        {title}
-      </p>
-    </div>
-  );
-});
-
-Place.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  changeLocation: PropTypes.func.isRequired,
+Locations.propTypes = {
+  SlideIn: PropTypes.object.isRequired,
 };
 export default Locations;
