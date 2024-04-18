@@ -16,7 +16,7 @@ const Testimonials = memo(function Testimonials({ SlideIn }) {
       </div>
       <div className="gap-30 flex h-fit w-full flex-col items-center justify-evenly sm:flex-row sm:items-start">
         <SlideIn>
-          <div className=" my-16 ">
+          <div className="my-16">
             <div id="TA_selfserveprop588">
               <ul id="NIufKgr4l">
                 <li id="TXBeDTTjuXu5">
@@ -63,4 +63,4 @@ const Testimonials = memo(function Testimonials({ SlideIn }) {
 export default Testimonials;
 Testimonials.propTypes = {
   SlideIn: PropTypes.object.isRequired,
-}
+};

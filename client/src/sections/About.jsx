@@ -73,4 +73,4 @@ const About = memo(function About({ SlideIn }) {
 export default About;
 About.propTypes = {
   SlideIn: PropTypes.object.isRequired,
-}
+};

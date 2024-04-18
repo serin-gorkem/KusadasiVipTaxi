@@ -53,6 +53,7 @@ const Home = memo(function Home() {
             <img
               key={image.id}
               src={image.src}
+              alt={image.alt}
               className="h-screen w-full object-cover"
             />
           );
@@ -75,6 +76,7 @@ const Home = memo(function Home() {
             <img
               key={image.id}
               src={image.src}
+              alt={image.alt}
               className="h-screen w-full object-cover"
             />
           );
@@ -94,13 +96,16 @@ const Home = memo(function Home() {
         </p>
         {showPopUp && (
           <div className="fixed bottom-6 z-10 flex animate-pulse items-center justify-center gap-2 self-end ">
-            <article className="hidden rounded-lg bg-white p-3 font-semibold text-black xl:block">
+            <article className="rounded-lg bg-white p-3 font-semibold text-black max-sm:hidden">
               <figure>
                 <figcaption>{i18nData("nav.whatsapp_message")} </figcaption>
               </figure>
             </article>
-            <a href="https://wa.me/+905438083997" aria-label="Whatsapp redirect link" >
-              <RiWhatsappFill className="h-12 w-12 cursor-pointer"></RiWhatsappFill>
+            <a
+              href="https://wa.me/+905438083997"
+              aria-label="Whatsapp redirect link"
+            >
+              <RiWhatsappFill className="h-16 w-16 cursor-pointer"></RiWhatsappFill>
             </a>
           </div>
         )}

@@ -30,7 +30,7 @@ const App = memo(function App() {
           </header>
           <main>
             <section ref={refs.home}>
-            <Home/>
+              <Home />
             </section>
             <section ref={refs.locations}>
               <Locations SlideIn={SlideIn} />

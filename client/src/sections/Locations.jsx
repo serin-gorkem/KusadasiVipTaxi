@@ -5,7 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import { useI18n } from "../i18nContext";
 import { lazy } from "react";
 import Lottie from "lottie-light-react";
-import Taxi from "../assets/Taxi.json"
+import Taxi from "../assets/Taxi.json";
 
 const Slider = lazy(() => import("react-multi-carousel"));
 const Place = lazy(() => import("../components/Place"));
