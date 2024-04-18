@@ -1,6 +1,7 @@
 import { memo, useRef } from "react";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { useI18n } from "../i18nContext";
+import PropTypes from "prop-types";
 
 const About = memo(function About({ SlideIn }) {
   const scrollRef = useRef(null);
@@ -70,3 +71,6 @@ const About = memo(function About({ SlideIn }) {
   );
 });
 export default About;
+About.propTypes = {
+  SlideIn: PropTypes.object.isRequired,
+}

@@ -1,19 +1,29 @@
-import Facts from "../components/Facts";
-
 import { useI18n } from "../i18nContext";
-import { memo } from "react";
+import { lazy, memo } from "react";
+import PropTypes from "prop-types";
+
+const Facts = lazy(() => import("../components/Facts"));
+// const Price = lazy(() => import("../assets/Price.json"));
+// const ThumbsUp = lazy(() => import("../assets/ThumbsUp.json"));
+// const TaxiMan = lazy(() => import("../assets/TaxiMan.json"));
+
+import TaxiMan from "../assets/TaxiMan.json"
+// import Facts from "../components/Facts"
+import Price from "../assets/Price.json"
+import ThumbsUp from "../assets/ThumbsUp.json"
+
 const animations = [
   {
     id: "0",
-    source: "FactAnim01",
+    source: ThumbsUp,
   },
   {
     id: "1",
-    source: "FactAnim02",
+    source: TaxiMan,
   },
   {
     id: "2",
-    source: "FactAnim03",
+    source: Price ,
   },
 ];
 const ChooseUs = memo(function ChooseUs({ SlideIn }) {
@@ -54,3 +64,6 @@ const ChooseUs = memo(function ChooseUs({ SlideIn }) {
 });
 
 export default ChooseUs;
+ChooseUs.propTypes = {
+  SlideIn: PropTypes.object.isRequired,
+}

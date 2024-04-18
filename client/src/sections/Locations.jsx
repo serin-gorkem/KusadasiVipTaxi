@@ -4,10 +4,11 @@ import { Suspense, memo, useRef, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import { useI18n } from "../i18nContext";
 import { lazy } from "react";
+import Lottie from "lottie-light-react";
+import Taxi from "../assets/Taxi.json"
 
 const Slider = lazy(() => import("react-multi-carousel"));
 const Place = lazy(() => import("../components/Place"));
-
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -49,6 +50,12 @@ const Locations = memo(function Locations({ SlideIn }) {
             </h2>
           </SlideIn>
         </div>
+        <Lottie
+          animationData={Taxi}
+          autoplay={true}
+          loop={true}
+          className=" h-44 w-44"
+        />
       </div>
       <SlideIn>
         <div
@@ -105,10 +112,11 @@ const Locations = memo(function Locations({ SlideIn }) {
               )}
             </p>
           </SlideIn>
-          <button className=" my-4 flex h-8 w-fit  items-center  justify-center self-center rounded-lg bg-primary-color px-6 py-2 shadow-lg hover:text-neutral active:shadow-inner md:h-12">
+          <button className=" my-4 flex h-8 w-fit  items-center justify-center self-center rounded-lg bg-primary-color px-6 py-2 shadow-lg hover:text-neutral active:shadow-inner md:h-12">
             <a
               href={currentLocation.readMore}
               className="text-[10px] font-semibold md:text-[14px]"
+              aria-label="read more link"
             >
               {i18nData(`locations.read_more`)}
             </a>

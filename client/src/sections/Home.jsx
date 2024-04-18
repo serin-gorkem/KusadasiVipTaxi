@@ -99,7 +99,7 @@ const Home = memo(function Home() {
                 <figcaption>{i18nData("nav.whatsapp_message")} </figcaption>
               </figure>
             </article>
-            <a href="https://wa.me/+905438083997" className="">
+            <a href="https://wa.me/+905438083997" aria-label="Whatsapp redirect link" >
               <RiWhatsappFill className="h-12 w-12 cursor-pointer"></RiWhatsappFill>
             </a>
           </div>

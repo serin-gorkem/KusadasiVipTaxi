@@ -1,5 +1,7 @@
 import { memo } from "react";
 import { useI18n } from "../i18nContext";
+import PropTypes from "prop-types";
+
 const Testimonials = memo(function Testimonials({ SlideIn }) {
   const i18nData = useI18n();
 
@@ -20,6 +22,7 @@ const Testimonials = memo(function Testimonials({ SlideIn }) {
                 <li id="TXBeDTTjuXu5">
                   <a
                     target="_blank"
+                    aria-label="tripadvisor reviews link"
                     href="https://www.tripadvisor.com/Attraction_Review-g297972-d27674314-Reviews-Kusadasi_Vip_Taxi-Kusadasi_Turkish_Aegean_Coast.html"
                   >
                     <img
@@ -39,6 +42,7 @@ const Testimonials = memo(function Testimonials({ SlideIn }) {
                 <li id="yceokv5c5x9o" className="4knrAJgf">
                   <a
                     target="_blank"
+                    aria-label="tripadvisor add review link"
                     href="https://www.tripadvisor.com/Attraction_Review-g297972-d27674314-Reviews-Kusadasi_Vip_Taxi-Kusadasi_Turkish_Aegean_Coast.html"
                   >
                     <img
@@ -57,3 +61,6 @@ const Testimonials = memo(function Testimonials({ SlideIn }) {
 });
 
 export default Testimonials;
+Testimonials.propTypes = {
+  SlideIn: PropTypes.object.isRequired,
+}
