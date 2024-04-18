@@ -42,7 +42,7 @@ const Footer = memo(function Footer() {
             </h2>
           </div>
         </div>
-        <div className=" flex flex-col items-start justify-center gap-2 py-4 text-primary-color sm:gap-4 ">
+        <div className=" flex flex-col items-start justify-center gap-2 py-4 px-10 text-primary-color sm:gap-4 ">
           <Information
             logo={
               <FaWhatsapp className="h-3 w-3 md:h-5 md:w-5 lg:h-6 lg:w-6" />
@@ -71,7 +71,7 @@ const Footer = memo(function Footer() {
           />
         </div>
       </div>
-      <div className=" mb-[7.5px] mt-2 h-[1px] bg-primary-color opacity-25  "></div>
+      <div className=" mb-[7.5px] mt-2 h-[1px] bg-primary-color   "></div>
       <div className="max-container my-6 flex items-center justify-between gap-2 md:gap-6">
         <div className="flex flex-col">
           <h3 className=" w-[182px] text-[10px] font-light text-neutral sm:text-[36px] md:w-[360] md:text-[20px] lg:w-[600] lg:text-[24px] xl:w-[619px] ">
@@ -89,7 +89,7 @@ const Footer = memo(function Footer() {
         >
           <input
             type="text"
-            className="mb-3 w-full border-b-[1px] border-primary-color border-opacity-40 bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder:opacity-25 sm:text-[20px] md:text-[16px] "
+            className="mb-3 w-full border-b-[1px] border-primary-color  bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder: sm:text-[20px] md:text-[16px] "
             placeholder={i18nData("footer.form_name")}
             name="name"
             onChange={handleForm}
@@ -99,7 +99,7 @@ const Footer = memo(function Footer() {
           ></input>
           <input
             type="email"
-            className="mb-3 w-full border-b-[1px] border-primary-color border-opacity-40 bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder:opacity-25 autofill:text-white autofill:shadow-[inset_0_0_0px_1000px_rgb(0,0,0)] sm:text-[20px] md:text-[16px]  "
+            className="mb-3 w-full border-b-[1px] border-primary-color  bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder: autofill:text-white autofill:shadow-[inset_0_0_0px_1000px_rgb(0,0,0)] sm:text-[20px] md:text-[16px]  "
             placeholder={i18nData("footer.form_email")}
             name="email"
             onChange={handleForm}
@@ -109,7 +109,7 @@ const Footer = memo(function Footer() {
           ></input>
           <label
             htmlFor="message"
-            className=" text-[6px] text-primary-color opacity-25 sm:text-[20px] md:text-[16px]"
+            className=" text-[6px] text-primary-color  sm:text-[20px] md:text-[16px]"
           >
             {i18nData("footer.form_help")}
           </label>
@@ -120,16 +120,15 @@ const Footer = memo(function Footer() {
             value={formData.message}
             required={true}
             autoComplete="given-message"
-            className=" h-[75px] w-full resize-none border-[1px] border-primary-color border-opacity-40 bg-transparent p-1 text-[8px] text-neutral outline-none sm:h-[150px] sm:text-[20px] md:text-[16px] "
+            className=" h-[75px] w-full resize-none border-[1px] border-primary-color  bg-transparent p-1 text-[8px] text-neutral outline-none sm:h-[150px] sm:text-[20px] md:text-[16px] "
           ></textarea>
-          <button className="mt-3 rounded-lg border-[1px] border-primary-color border-opacity-40 bg-transparent px-4 py-1 text-[6px] text-neutral hover:text-primary-color sm:px-6 sm:py-2 sm:text-[16px] ">
+          <button className="mt-3 rounded-lg border-[1px] border-primary-color  bg-transparent px-4 py-1 text-[6px] text-neutral hover:text-primary-color sm:px-6 sm:py-2 sm:text-[16px] ">
             {i18nData("footer.form_button")}
           </button>
         </form>
       </div>
-      <div className="flex items-center justify-start gap-1 text-[8px] text-primary-color opacity-40 sm:text-[10px]">
+      <div className="flex items-center justify-start gap-1 text-[8px] text-primary-color  sm:text-[10px]">
         <p> {i18nData("footer.copyright")} </p>
-
         <p>
           {new Date().getFullYear()} {i18nData("footer.company")}
         </p>
@@ -144,7 +143,7 @@ const Information = memo(function Information(props) {
       <a
         href={props.url}
         aria-label={props.label}
-        className="w-20 cursor-pointer text-[6px] font-light md:w-48 md:text-[12px] lg:w-72 lg:text-[16px] "
+        className="w-20 cursor-pointer text-[10px] font-light md:w-48 md:text-[12px] lg:w-72 lg:text-[16px] "
       >
         {props.info}
       </a>

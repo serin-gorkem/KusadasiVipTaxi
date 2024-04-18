@@ -99,6 +99,7 @@ const Locations = memo(function Locations({ SlideIn }) {
                   <img
                     key={image.id}
                     src={image.url}
+                    alt={image.alt}
                     className=" h-[450px] rounded-full  bg-center object-cover p-2 md:h-[360px] xl:h-[400px] xl:w-full xl:rounded-none xl:p-0 "
                   />
                 );
