@@ -1,43 +1,26 @@
 import { FaEnvelope, FaLocationDot, FaWhatsapp } from "react-icons/fa6";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { memo, useState } from "react";
+import { useI18n } from "../i18nContext";
 
-function Information(props) {
-  return (
-    <div className="flex items-start justify-center gap-2 ">
-      <div>{props.logo}</div>
-      <a
-        href={props.url}
-        className="w-20 cursor-pointer text-[6px] font-light md:w-48 md:text-[12px] lg:w-72 lg:text-[16px] "
-      >
-        {props.info}
-      </a>
-    </div>
-  );
-}
 
-export default function Footer(props) {
+
+const Footer = memo(function Footer() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const i18nData = useI18n();
 
   function handleForm(event) {
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [event.target.name]:   event.target.value,
+        [event.target.name]: event.target.value,
       };
     });
   }
-
-  const handlePage = (scroolRef) => {
-    scroolRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
 
   return (
     <div className=" w-full bg-neutral-dark px-3 py-[14px] sm:px-16 md:px-8">
@@ -47,12 +30,15 @@ export default function Footer(props) {
             src="./Logo.png"
             alt="logo"
             className=" aspect-square h-16 md:h-20 lg:h-40 "
-          ></img>
+            loading="lazy"
+          />
+
           <div className="h-11 w-[1px] bg-primary-color opacity-30 md:h-24 lg:h-32"></div>
           <div>
             <h1 className=" text-[8px] font-light text-primary-color md:text-xl lg:text-2xl">
-              {props.language("footer.title")}
+              {i18nData("footer.title")}
             </h1>
+
             <h2 className=" text-[10px] text-neutral md:text-xl lg:text-3xl">
               KusadasiVipTaxi
             </h2>
@@ -64,64 +50,39 @@ export default function Footer(props) {
               <FaWhatsapp className="h-3 w-3 md:h-5 md:w-5 lg:h-6 lg:w-6" />
             }
             info="+90 543 808 39 97"
+            label="Whatsapp number"
             url="https://wa.me/+905438083997"
           />
+
           <Information
             logo={
               <FaEnvelope className="h-3 w-3 md:h-5 md:w-5 lg:h-6 lg:w-6" />
             }
             info="ahmet409809@gmail.com"
+            label="Email address"
             url="mailto:ahmet409809@gmail.com"
           />
+
           <Information
             logo={
               <FaLocationDot className="h-3 w-3 md:h-5 md:w-5 lg:h-6 lg:w-6" />
             }
             info="Kuşadası, Merkez"
+            label="Location"
+            url=""
           />
         </div>
       </div>
       <div className=" mb-[7.5px] mt-2 h-[1px] bg-primary-color opacity-25  "></div>
-      <div className="max-container my-6 flex items-start justify-between gap-2 md:gap-6">
+      <div className="max-container my-6 flex items-center justify-between gap-2 md:gap-6">
         <div className="flex flex-col">
           <h3 className=" w-[182px] text-[10px] font-light text-neutral sm:text-[36px] md:w-[360] md:text-[20px] lg:w-[600] lg:text-[24px] xl:w-[619px] ">
-            {props.language("footer.slogan")}
+            {i18nData("footer.slogan")}
           </h3>
+
           <h4 className=" text-[8px] text-primary-color sm:text-[32px] md:text-[24px] ">
-            {props.language("footer.sub_slogan")}
+            {i18nData("footer.sub_slogan")}
           </h4>
-          <div className=" flex flex-col gap-1 p-2 text-[8px] sm:p-4 sm:text-[20px]  ">
-            <p
-              className=" w-fit cursor-pointer text-primary-color opacity-40 hover:opacity-100 "
-              onClick={() => handlePage(props.home)}
-            >
-              {props.language("footer.home")}
-            </p>
-            <p
-              className=" w-fit cursor-pointer text-primary-color opacity-40 hover:opacity-100 "
-              onClick={() => handlePage(props.locations)}
-            >
-              {props.language("footer.locations")}
-            </p>
-            <p
-              className=" w-fit cursor-pointer text-primary-color opacity-40 hover:opacity-100 "
-              onClick={() => handlePage(props.chooseUs)}
-            >
-              {props.language("footer.chooseUs")}
-            </p>
-            <p
-              className=" w-fit cursor-pointer text-primary-color opacity-40 hover:opacity-100 "
-              onClick={() => handlePage(props.about)}
-            >
-              {props.language("footer.about")}
-            </p>
-            <p
-              className=" w-fit cursor-pointer text-primary-color opacity-40 hover:opacity-100 "
-              onClick={() => handlePage(props.testimonials)}
-            >
-              {props.language("footer.testimonials")}
-            </p>
-          </div>
         </div>
         <form
           className="m-0"
@@ -131,7 +92,7 @@ export default function Footer(props) {
           <input
             type="text"
             className="mb-3 w-full border-b-[1px] border-primary-color border-opacity-40 bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder:opacity-25 sm:text-[20px] md:text-[16px] "
-            placeholder={props.language("footer.form_name")}
+            placeholder={i18nData("footer.form_name")}
             name="name"
             onChange={handleForm}
             value={formData.name}
@@ -141,7 +102,7 @@ export default function Footer(props) {
           <input
             type="email"
             className="mb-3 w-full border-b-[1px] border-primary-color border-opacity-40 bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder:opacity-25 autofill:text-white autofill:shadow-[inset_0_0_0px_1000px_rgb(0,0,0)] sm:text-[20px] md:text-[16px]  "
-            placeholder={props.language("footer.form_email")}
+            placeholder={i18nData("footer.form_email")}
             name="email"
             onChange={handleForm}
             value={formData.email}
@@ -152,7 +113,7 @@ export default function Footer(props) {
             htmlFor="message"
             className=" text-[6px] text-primary-color opacity-25 sm:text-[20px] md:text-[16px]"
           >
-            {props.language("footer.form_help")}
+            {i18nData("footer.form_help")}
           </label>
           <textarea
             id="message"
@@ -164,30 +125,39 @@ export default function Footer(props) {
             className=" h-[75px] w-full resize-none border-[1px] border-primary-color border-opacity-40 bg-transparent p-1 text-[8px] text-neutral outline-none sm:h-[150px] sm:text-[20px] md:text-[16px] "
           ></textarea>
           <button className="mt-3 rounded-lg border-[1px] border-primary-color border-opacity-40 bg-transparent px-4 py-1 text-[6px] text-neutral hover:text-primary-color sm:px-6 sm:py-2 sm:text-[16px] ">
-            {props.language("footer.form_button")}
+            {i18nData("footer.form_button")}
           </button>
         </form>
       </div>
       <div className="flex items-center justify-start gap-1 text-[8px] text-primary-color opacity-40 sm:text-[10px]">
-        <p> {props.language("footer.copyright")} </p>
+        <p> {i18nData("footer.copyright")} </p>
+
         <p>
-          {new Date().getFullYear()} {props.language("footer.company")}{" "}
+          {new Date().getFullYear()} {i18nData("footer.company")}
         </p>
       </div>
     </div>
   );
-}
-
+});
+const Information = memo(function Information(props) {
+  return (
+    <div className="flex items-start justify-center gap-2 ">
+      <div>{props.logo}</div>
+      <a
+        href={props.url}
+        aria-label={props.label}
+        className="w-20 cursor-pointer text-[6px] font-light md:w-48 md:text-[12px] lg:w-72 lg:text-[16px] "
+      >
+        {props.info}
+      </a>
+    </div>
+  );
+});
 Information.propTypes = {
   logo: PropTypes.node.isRequired,
   info: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
 };
-Footer.propTypes = {
-  home: PropTypes.object.isRequired,
-  locations: PropTypes.object.isRequired,
-  chooseUs: PropTypes.object.isRequired,
-  about: PropTypes.object.isRequired,
-  testimonials: PropTypes.object.isRequired,
-  language: PropTypes.func.isRequired,
-};
+
+export default Footer;

@@ -76,6 +76,9 @@
     "read_more": "Daha fazla oku",
     "description": "Merhaba benim adım Mustafa, 10 yılı aşkın süredir seyahat deneyiminizi kolaylaştırmak ve daha keyifli hale getirmek için buradayız. Seyahat etmeyi daha fazla eğlenceli ve pratik hale getirmek için yola çıktık. Müşterilerimize konforlu ve güvenilir bir ulaşım deneyimi sunmayı amaçlıyoruz."
   },
+  "testimonials": {
+    "title": "Yorumlar"
+  },
   "footer": {
     "title": "Biz",
     "slogan": "Güvenilir Taksi Servisimizle Unutulmaz Maceralara Yelken Açın",

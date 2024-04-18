@@ -10,10 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "country-flag-icons": "^1.5.10",
-    "framer-motion": "^11.0.28",
-    "i18next": "^23.10.1",
-    "lottie-react": "^2.4.0",
+    "lottie-light-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^14.1.0",
