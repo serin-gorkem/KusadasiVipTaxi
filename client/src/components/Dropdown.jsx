@@ -5,7 +5,6 @@ import { useI18n } from "../i18nContext";
 import trFlag from "../assets/icons/trFlag.svg"
 import enFlag from "../assets/icons/enFlag.svg"
 import deFlag from "../assets/icons/deFlag.svg"
-
 const countryIcons =[
   {
     src: trFlag,
