@@ -1,5 +1,5 @@
 import Dropdown from "./Dropdown";
-import { RiMenu3Fill } from "react-icons/ri";
+import hamburger from "../assets/icons/hamburger.svg";
 import PropTypes from "prop-types";
 import { memo } from "react";
 
@@ -21,10 +21,12 @@ const Navbar = memo(function Navbar(props) {
           handleLanguageChange={props.handleLanguageChange}
           language={props.language}
         />
-        <RiMenu3Fill
-          className="h-8 w-8 cursor-pointer text-primary-color"
-          onClick={props.toggleNavigationMenu}
-        />
+        <img
+        src={hamburger}
+        alt="hamburger icon"
+        className="w-8 h-8 cursor-pointer"
+        onClick={() => props.toggleNavigationMenu()}
+        ></img>
       </div>
     </nav>
   );

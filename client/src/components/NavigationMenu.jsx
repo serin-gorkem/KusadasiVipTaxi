@@ -1,8 +1,9 @@
-import { IoCloseCircle } from "react-icons/io5";
-import { RiArrowDropRightLine } from "react-icons/ri";
 import PropTypes from "prop-types";
 import { useI18n } from "../i18nContext";
 import { memo } from "react";
+import closeCircle from "../assets/icons/closeCircle.svg";
+import arrowRight from "../assets/icons/arrowRight.svg";
+
 
 const NavigationMenu = memo(function NavigationMenu({ open, toggleNavigationMenu, refs }) {
   const i18nData = useI18n();
@@ -29,7 +30,11 @@ const NavigationMenu = memo(function NavigationMenu({ open, toggleNavigationMenu
           onClick={() => handlePage(element.url)}
         >
           <p>{element.name}</p>
-          <RiArrowDropRightLine className="h-8 w-8" />
+          <img
+          src={arrowRight}
+          className="h-6 w-6"
+          alt="down arrow"
+          ></img>
         </li>
         <hr></hr>
       </div>
@@ -42,10 +47,13 @@ const NavigationMenu = memo(function NavigationMenu({ open, toggleNavigationMenu
           aria-label="navigation menu"
           className="glass-bg fixed right-0 z-50 h-screen w-1/2 sm:w-1/5 md:w-2/6 "
         >
-          <IoCloseCircle
-            className=" absolute right-2 top-5 h-8 w-8 cursor-pointer text-primary-color"
-            onClick={toggleNavigationMenu}
-          />
+          <img
+          src={closeCircle}
+          className=" absolute right-2 top-5 h-8 w-8 cursor-pointer text-primary-color"
+          onClick={toggleNavigationMenu}
+          >
+
+          </img>
           <div className=" relative top-20">
             <ul className="flex flex-col">{menuItems}</ul>
           </div>

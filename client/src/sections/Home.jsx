@@ -1,9 +1,10 @@
-import { RiWhatsappFill } from "react-icons/ri";
+// import { RiWhatsappFill } from "react-icons/ri";
 import { memo, useEffect, useState } from "react";
 import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProgressBar from "../components/ProgressBar";
 import { useI18n } from "../i18nContext";
+import whatsapp from "../assets/icons/whatsapp.svg";
 
 const responsive = {
   superLargeDesktop: {
@@ -67,7 +68,7 @@ const Home = memo(function Home() {
                   key={image.id}
                   src={image.src}
                   alt={image.alt}
-                  className="h-svh w-full object-cover"
+                  className="h-screen w-full object-cover"
                 />
               );
             })}
@@ -81,7 +82,7 @@ const Home = memo(function Home() {
             autoPlaySpeed={4000}
             swipeable={false}
             draggable={false}
-            className="absolute h-screen w-full max-sm:hidden"
+            className="absolute w-full max-sm:hidden"
           >
             {jsonData.landscape.map((image) => {
               return (
@@ -101,7 +102,7 @@ const Home = memo(function Home() {
           {i18nData("home.title")}
         </h1>
 
-        <h2 className="font-medium z-10 mb-4 text-2xl md:text-4xl lg:text-6xl  ">
+        <h2 className="z-10 mb-4 text-2xl font-medium md:text-4xl lg:text-6xl  ">
           {i18nData("home.subtitle")}
         </h2>
 
@@ -109,7 +110,7 @@ const Home = memo(function Home() {
           {i18nData("home.slogan")}
         </p>
         {showPopUp && (
-          <div className="fixed bottom-6 z-10 flex sm:animate-pulse items-center justify-center gap-2 self-end ">
+          <div className="fixed bottom-6 z-10 flex items-center justify-center gap-2 self-end sm:animate-pulse ">
             <article className="rounded-lg bg-neutral p-3 font-semibold text-black max-sm:hidden">
               <figure>
                 <figcaption>{i18nData("nav.whatsapp_message")} </figcaption>
@@ -119,7 +120,11 @@ const Home = memo(function Home() {
               href="https://wa.me/+905438083997"
               aria-label="Whatsapp redirect link"
             >
-              <RiWhatsappFill className="h-16 w-16 cursor-pointer text-primary-color"></RiWhatsappFill>
+              <img
+                src={whatsapp}
+                alt="Whatsapp Icon"
+                className="h-10 w-10 cursor-pointer"
+              ></img>
             </a>
           </div>
         )}

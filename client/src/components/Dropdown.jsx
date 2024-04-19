@@ -1,8 +1,28 @@
 import { memo, useState } from "react";
-import { IoMdArrowDropdown } from "react-icons/io";
+import dropdownArrow from "../assets/icons/dropdownArrow.svg"
 import PropTypes from "prop-types";
 import { useI18n } from "../i18nContext";
-import countries from "../constants/Flags.json";
+import trFlag from "../assets/icons/trFlag.svg"
+import enFlag from "../assets/icons/enFlag.svg"
+import deFlag from "../assets/icons/deFlag.svg"
+
+const countryIcons =[
+  {
+    src: trFlag,
+    name : "TR",
+    id: "0"
+  },
+  {
+    src: enFlag,
+    name : "EN",
+    id: "1"
+  },
+  {
+    src: deFlag,
+    name : "DE",
+    id: "2"
+  }
+]
 
 const Dropdown = memo(function Dropdown({ handleLanguageChange }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,16 +32,16 @@ const Dropdown = memo(function Dropdown({ handleLanguageChange }) {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   }
 
-  const countryList = countries.map((country) => {
+  const countryList = countryIcons.map((icon) => {
     return (
-      <div key={country.name}>
+      <div key={icon.name}>
         <li
-          value={country.id}
+          value={icon.id}
           className="glass-bg flex w-full cursor-pointer items-center justify-evenly gap-2 text-neutral hover:bg-primary-color"
-          onClick={() => handleLanguageChange(country.name)}
+          onClick={() => handleLanguageChange(icon.name)}
         >
-          {country.name}
-          <img src={country.iconURL} className="h-8 w-8" alt={country.alt} />
+          {icon.name}
+          <img src={icon.src} className="h-8 w-8" alt={icon.alt} />
         </li>
         <div className=" bg-neutral-400 text-neutral-400 h-[1px] w-full"></div>
       </div>
@@ -31,10 +51,7 @@ const Dropdown = memo(function Dropdown({ handleLanguageChange }) {
   return (
     <div className="relative flex items-center justify-center gap-1">
       <p className="text-primary-color"> {i18nData("home.language")} </p>
-      <IoMdArrowDropdown
-        className=" cursor-pointer text-primary-color"
-        onClick={toggleDropdown}
-      />
+      <img src={dropdownArrow} className="cursor-pointer w-6 h-6  sm:w-8 sm:h-8" onClick={toggleDropdown} ></img>
       <div
         aria-label="horizontal line"
         className="horizontal-line bg-neutral-400 h-12 w-0.5 "

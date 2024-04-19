@@ -1,9 +1,6 @@
 import { Suspense, lazy, memo, useState } from "react";
 import PropTypes from "prop-types";
 
-// import Navbar from "../components/Navbar";
-// import NavigationMenu from "../components/NavigationMenu";
-
 const Navbar = lazy(() => import("../components/Navbar"));
 const NavigationMenu = lazy(() => import("../components/NavigationMenu"));
 
