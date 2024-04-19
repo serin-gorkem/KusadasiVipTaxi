@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
-import { memo } from "react";
-import Lottie from "lottie-light-react";
+import { lazy, memo } from "react";
+
+const Lottie = memo(lazy(() => import("lottie-light-react")));
 
 const Facts = memo(function Facts(props) {
   return (

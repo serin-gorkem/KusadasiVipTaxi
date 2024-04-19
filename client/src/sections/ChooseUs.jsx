@@ -3,12 +3,8 @@ import { lazy, memo } from "react";
 import PropTypes from "prop-types";
 
 const Facts = lazy(() => import("../components/Facts"));
-// const Price = lazy(() => import("../assets/Price.json"));
-// const ThumbsUp = lazy(() => import("../assets/ThumbsUp.json"));
-// const TaxiMan = lazy(() => import("../assets/TaxiMan.json"));
 
 import TaxiMan from "../assets/TaxiMan.json";
-// import Facts from "../components/Facts"
 import Price from "../assets/Price.json";
 import ThumbsUp from "../assets/ThumbsUp.json";
 

@@ -33,11 +33,11 @@ const Footer = memo(function Footer() {
 
           <div className="h-11 w-[1px] bg-primary-color opacity-30 md:h-24 lg:h-32"></div>
           <div>
-            <h1 className=" text-[8px] font-light text-primary-color md:text-xl lg:text-2xl">
+            <h1 className=" text-xs font-light text-primary-color md:text-xl lg:text-2xl">
               {i18nData("footer.title")}
             </h1>
 
-            <h2 className=" text-[10px] text-neutral md:text-xl lg:text-3xl">
+            <h2 className=" text-sm text-neutral md:text-xl lg:text-3xl">
               KusadasiVipTaxi
             </h2>
           </div>

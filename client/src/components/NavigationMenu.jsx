@@ -4,31 +4,17 @@ import PropTypes from "prop-types";
 import { useI18n } from "../i18nContext";
 import { memo } from "react";
 
-const NavigationMenu = memo(function NavigationMenu(props) {
+const NavigationMenu = memo(function NavigationMenu({ open, toggleNavigationMenu, refs }) {
   const i18nData = useI18n();
 
   const menuElementStrings = [
-    {
-      name: i18nData("nav.nav_home"),
-      url: props.refs.home,
-    },
-    {
-      name: i18nData("nav.nav_locations"),
-      url: props.refs.locations,
-    },
-    {
-      name: i18nData("nav.nav_chooseUs"),
-      url: props.refs.chooseUs,
-    },
-    {
-      name: i18nData("nav.nav_about"),
-      url: props.refs.about,
-    },
-    {
-      name: i18nData("nav.nav_testimonials"),
-      url: props.refs.testimonials,
-    },
+    { name: i18nData("nav.nav_home"), url: refs.home },
+    { name: i18nData("nav.nav_locations"), url: refs.locations },
+    { name: i18nData("nav.nav_chooseUs"), url: refs.chooseUs },
+    { name: i18nData("nav.nav_about"), url: refs.about },
+    { name: i18nData("nav.nav_testimonials"), url: refs.testimonials },
   ];
+
   const handlePage = (scrollRef) => {
     scrollRef.current.scrollIntoView({
       behavior: "smooth",
@@ -39,7 +25,7 @@ const NavigationMenu = memo(function NavigationMenu(props) {
     return (
       <div key={element.name}>
         <li
-          className="flex h-24 cursor-pointer items-center justify-between px-3  text-[12px] text-white hover:bg-primary-color active:bg-primary-color md:text-[16px] lg:h-28 lg:text-[24px]"
+          className="flex h-24 cursor-pointer items-center justify-between px-3  text-[12px] text-white hover:bg-primary-color active:bg-primary-color md:text-[16px] xl:h-28 xl:text-[24px]"
           onClick={() => handlePage(element.url)}
         >
           <p>{element.name}</p>
@@ -51,14 +37,14 @@ const NavigationMenu = memo(function NavigationMenu(props) {
   });
   return (
     <>
-      {props.open && (
+      {open && (
         <div
           aria-label="navigation menu"
           className="glass-bg fixed right-0 z-50 h-screen w-1/2 sm:w-1/5 md:w-2/6 "
         >
           <IoCloseCircle
             className=" absolute right-2 top-5 h-8 w-8 cursor-pointer text-primary-color"
-            onClick={props.toggleNavigationMenu}
+            onClick={toggleNavigationMenu}
           />
           <div className=" relative top-20">
             <ul className="flex flex-col">{menuItems}</ul>

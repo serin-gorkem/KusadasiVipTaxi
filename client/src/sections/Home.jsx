@@ -4,7 +4,7 @@ import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProgressBar from "../components/ProgressBar";
 import { useI18n } from "../i18nContext";
-import imageInfo from "../constants/HomeSlider.json";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -28,75 +28,89 @@ const responsive = {
 const Home = memo(function Home() {
   const [showPopUp, setShowPopUp] = useState(false);
   const i18nData = useI18n();
+  const [jsonData, setJsonData] = useState(null);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const jsonModule = await import("../constants/HomeSlider.json");
+        // Access the JSON data from the module namespace object
+        setJsonData(jsonModule.default);
+      } catch (error) {
+        console.error("Error fetching JSON data:", error);
+      }
+    };
     setTimeout(() => {
       setShowPopUp(true);
-    }, 1000);
+    }, 8000);
+
+    fetchData();
   }, []);
 
   return (
     <div className=" relative">
-      <Slider
-        responsive={responsive}
-        infinite={true}
-        autoPlay={true}
-        arrows={false}
-        autoPlaySpeed={4000}
-        swipeable={false}
-        alt="carousel_image_item"
-        draggable={false}
-        className="absolute h-screen w-full sm:hidden"
-      >
-        {imageInfo.portrait.map((image) => {
-          return (
-            <img
-              key={image.id}
-              src={image.src}
-              alt={image.alt}
-              className="h-screen w-full object-cover"
-            />
-          );
-        })}
-      </Slider>
-      <div className="absolute z-0 h-screen w-full bg-[#00000040] "></div>
-      <Slider
-        responsive={responsive}
-        infinite={true}
-        autoPlay={true}
-        arrows={false}
-        autoPlaySpeed={4000}
-        swipeable={false}
-        alt="carousel_image_item"
-        draggable={false}
-        className="absolute h-screen w-full max-sm:hidden"
-      >
-        {imageInfo.landscape.map((image) => {
-          return (
-            <img
-              key={image.id}
-              src={image.src}
-              alt={image.alt}
-              className="h-screen w-full object-cover"
-            />
-          );
-        })}
-      </Slider>
-      <div className="max-container relative flex h-screen flex-col items-center justify-center p-6 text-center text-white ">
-        <h1 className="z-10 mb-1 text-5xl font-extrabold md:text-6xl lg:text-[100px]">
+      {jsonData && (
+        <>
+          <Slider
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            arrows={false}
+            autoPlaySpeed={4000}
+            swipeable={false}
+            draggable={false}
+            className="absolute h-svh w-full sm:hidden"
+          >
+            {jsonData.portrait.map((image) => {
+              return (
+                <img
+                  key={image.id}
+                  src={image.src}
+                  alt={image.alt}
+                  className="h-svh w-full object-cover"
+                />
+              );
+            })}
+          </Slider>
+          <div className="absolute z-0 h-screen w-full bg-[#00000040] "></div>
+          <Slider
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            arrows={false}
+            autoPlaySpeed={4000}
+            swipeable={false}
+            draggable={false}
+            className="absolute h-screen w-full max-sm:hidden"
+          >
+            {jsonData.landscape.map((image) => {
+              return (
+                <img
+                  key={image.id}
+                  src={image.src}
+                  alt={image.alt}
+                  className="h-screen w-full object-cover"
+                />
+              );
+            })}
+          </Slider>
+        </>
+      )}
+      <div className="relative flex h-screen flex-col items-center justify-center p-6 text-center text-white ">
+        <h1 className="z-10 mb-1 text-4xl font-extrabold md:text-6xl lg:text-[100px]">
           {i18nData("home.title")}
         </h1>
 
-        <h2 className="font-regular z-10 mb-4 text-3xl md:text-4xl lg:text-6xl  ">
+        <h2 className="font-regular z-10 mb-4 text-2xl md:text-4xl lg:text-6xl  ">
           {i18nData("home.subtitle")}
         </h2>
 
-        <p className="z-10 w-[300px] text-sm md:w-[450px] md:text-xl lg:w-[600px] lg:text-2xl ">
+        <p className="z-10 w-[300px] text-xs md:w-[450px] md:text-xl lg:w-[600px] lg:text-2xl ">
           {i18nData("home.slogan")}
         </p>
         {showPopUp && (
-          <div className="fixed bottom-6 z-10 flex animate-pulse items-center justify-center gap-2 self-end ">
-            <article className="rounded-lg bg-white p-3 font-semibold text-black max-sm:hidden">
+          <div className="fixed bottom-6 z-10 flex sm:animate-pulse items-center justify-center gap-2 self-end ">
+            <article className="rounded-lg bg-neutral p-3 font-semibold text-black max-sm:hidden">
               <figure>
                 <figcaption>{i18nData("nav.whatsapp_message")} </figcaption>
               </figure>
@@ -105,12 +119,12 @@ const Home = memo(function Home() {
               href="https://wa.me/+905438083997"
               aria-label="Whatsapp redirect link"
             >
-              <RiWhatsappFill className="h-16 w-16 cursor-pointer"></RiWhatsappFill>
+              <RiWhatsappFill className="h-16 w-16 cursor-pointer text-primary-color"></RiWhatsappFill>
             </a>
           </div>
         )}
       </div>
-      <div className="absolute bottom-0 w-full">
+      <div className="absolute bottom-0 w-full max-sm:hidden">
         <ProgressBar />
       </div>
     </div>

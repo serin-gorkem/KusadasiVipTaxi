@@ -52,9 +52,15 @@ const Locations = memo(function Locations({ SlideIn }) {
         </div>
         <Lottie
           animationData={Taxi}
+          autoplay={false}
+          loop={false}
+          className=" h-44 w-44 sm:hidden"
+        />
+        <Lottie
+          animationData={Taxi}
           autoplay={true}
           loop={true}
-          className=" h-44 w-44"
+          className=" h-44 w-44 max-sm:hidden"
         />
       </div>
       <SlideIn>
