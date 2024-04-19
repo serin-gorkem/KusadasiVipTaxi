@@ -59,7 +59,7 @@ const Home = memo(function Home() {
             autoPlaySpeed={4000}
             swipeable={false}
             draggable={false}
-            className="absolute h-svh w-full sm:hidden"
+            className="absolute w-full sm:hidden"
           >
             {jsonData.portrait.map((image) => {
               return (
