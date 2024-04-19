@@ -101,7 +101,7 @@ const Home = memo(function Home() {
           {i18nData("home.title")}
         </h1>
 
-        <h2 className="font-regular z-10 mb-4 text-2xl md:text-4xl lg:text-6xl  ">
+        <h2 className="font-medium z-10 mb-4 text-2xl md:text-4xl lg:text-6xl  ">
           {i18nData("home.subtitle")}
         </h2>
 

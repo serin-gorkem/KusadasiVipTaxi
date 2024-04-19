@@ -2,9 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    @apply font-body bg-base    
+@layer base {
+    body {
+        @apply font-body bg-base
+    }
+
+    /* palanquin-300 - latin-ext */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Palanquin';
+        font-style: normal;
+        font-weight: 300;
+        src: url('../fonts/palanquin-v13-latin-ext-300.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* palanquin-500 - latin-ext */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Palanquin';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/palanquin-v13-latin-ext-500.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* palanquin-600 - latin-ext */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Palanquin';
+        font-style: normal;
+        font-weight: 600;
+        src: url('../fonts/palanquin-v13-latin-ext-600.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* palanquin-700 - latin-ext */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Palanquin';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/palanquin-v13-latin-ext-700.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
 }
+
 @layer components {
     .max-container {
         max-width: 1024px;
@@ -14,32 +61,30 @@ body{
             max-width: 1440px;
         }
     }
+
+    .glass-bg {
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(14.5px);
+        -webkit-backdrop-filter: blur(14.5px);
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus input:-webkit-autofill,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        -webkit-text-fill-color: #f1f1f1;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
 }
-.glass-bg {
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(14.5px);
-    -webkit-backdrop-filter: blur(14.5px);
-}
-#TA_selfserveprop588{
-}
-.widSSP{
-}
+
 @media not all and (min-width: 640px) {
-    .widSSP{
+    .widSSP {
         width: 100% !important;
     }
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus
-input:-webkit-autofill, 
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #f1f1f1;
-  transition: background-color 5000s ease-in-out 0s;
 }
