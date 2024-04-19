@@ -1,5 +1,4 @@
 import { memo, useState } from "react";
-import dropdownArrow from "../assets/icons/dropdownArrow.svg"
 import { IoMdArrowDropdown } from "react-icons/io";
 import PropTypes from "prop-types";
 import { useI18n } from "../i18nContext";
