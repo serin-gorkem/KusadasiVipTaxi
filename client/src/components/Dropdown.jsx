@@ -1,5 +1,6 @@
 import { memo, useState } from "react";
 import dropdownArrow from "../assets/icons/dropdownArrow.svg"
+import { IoMdArrowDropdown } from "react-icons/io";
 import PropTypes from "prop-types";
 import { useI18n } from "../i18nContext";
 import trFlag from "../assets/icons/trFlag.svg"
@@ -50,7 +51,10 @@ const Dropdown = memo(function Dropdown({ handleLanguageChange }) {
   return (
     <div className="relative flex items-center justify-center gap-1">
       <p className="text-primary-color"> {i18nData("home.language")} </p>
-      <img src={dropdownArrow} className="cursor-pointer w-6 h-6  sm:w-8 sm:h-8" onClick={toggleDropdown} ></img>
+      <IoMdArrowDropdown
+        className=" cursor-pointer text-primary-color"
+        onClick={toggleDropdown}
+      />
       <div
         aria-label="horizontal line"
         className="horizontal-line bg-neutral-400 h-12 w-0.5 "

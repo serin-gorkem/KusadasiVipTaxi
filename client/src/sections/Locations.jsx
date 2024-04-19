@@ -95,7 +95,7 @@ const Locations = memo(function Locations({ SlideIn }) {
             </div>
           </SlideIn>
           <div className="information-container w-full max-container flex flex-col gap-4 p-6 lg:flex-row lg:py-8 ">
-            <div className="lg:w-1/2 lg:py-0 max-sm:hidden">
+            <div className="lg:w-1/2 lg:py-0">
               <iframe
                 className="h-96 w-full shadow-[0px_4px_4px_rgba(0,0,0,0.25)] lg:h-full "
                 aria-label="map"
