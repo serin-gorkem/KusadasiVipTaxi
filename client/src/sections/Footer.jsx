@@ -1,31 +1,29 @@
-// import { FaEnvelope, FaLocationDot, FaWhatsapp } from "react-icons/fa6";
+import { FaEnvelope, FaLocationDot, FaWhatsapp } from "react-icons/fa6";
 import PropTypes from "prop-types";
 import { memo, useState } from "react";
 import { useI18n } from "../i18nContext";
-import envelope from "../assets/icons/envelope.svg";
-import phone from "../assets/icons/phone.svg";
-import location from "../assets/icons/location.svg";
 
 const footerContent = [
   {
-    logo: phone,
+    logo: <FaWhatsapp/>,
     info: "+90 543 808 39 97",
-    ariaLabel: "phone number",
-    link: "https://wa.me/+905438083997",
+    label:"phone number",
+    link:"https://wa.me/+905438083997"
   },
   {
-    logo: envelope,
+    logo: <FaEnvelope/>,
     info: "ahmet409809@gmail.com",
-    ariaLabel: "email address",
-    link: "mailto:ahmet409809@gmail.com",
+    label:"email address",
+    link:"mailto:ahmet409809@gmail.com"
   },
   {
-    logo: location,
+    logo: <FaLocationDot/>,
     info: "Aydin / Kusadasi",
-    ariaLabel: "whatsapp number",
-    link: "https://maps.app.goo.gl/DYKu6NZHdjhnrkiQ7",
-  },
-];
+    label:"whatsapp number",
+    link:"https://maps.app.goo.gl/DYKu6NZHdjhnrkiQ7"
+  }
+]
+
 
 const Footer = memo(function Footer() {
   const [formData, setFormData] = useState({
@@ -66,16 +64,18 @@ const Footer = memo(function Footer() {
             </h2>
           </div>
         </div>
-        <div className=" flex flex-col items-start justify-center gap-2 py-4 text-primary-color sm:gap-4 ">
-          {footerContent.map((item, index) => (
+        <div className=" flex flex-col items-start justify-center gap-2 py-4 px-10 text-primary-color sm:gap-4 ">
+        {
+          footerContent.map((item, index) => (
             <Information
               key={index}
               logo={item.logo}
               info={item.info}
-              ariaLabel={item.ariaLabel}
-              link={item.link}
+              label={item.label}
+              url={item.link}
             />
-          ))}
+          ))
+        }
         </div>
       </div>
       <div className=" mb-[7.5px] mt-2 h-[1px] bg-primary-color   "></div>
@@ -96,7 +96,7 @@ const Footer = memo(function Footer() {
         >
           <input
             type="text"
-            className="placeholder: mb-3 w-full border-b-[1px]  border-primary-color bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color sm:text-[20px] md:text-[16px] "
+            className="mb-3 w-full border-b-[1px] border-primary-color  bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder: sm:text-[20px] md:text-[16px] "
             placeholder={i18nData("footer.form_name")}
             name="name"
             onChange={handleForm}
@@ -106,7 +106,7 @@ const Footer = memo(function Footer() {
           ></input>
           <input
             type="email"
-            className="placeholder: mb-3 w-full border-b-[1px]  border-primary-color bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color autofill:text-white autofill:shadow-[inset_0_0_0px_1000px_rgb(0,0,0)] sm:text-[20px] md:text-[16px]  "
+            className="mb-3 w-full border-b-[1px] border-primary-color  bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder: autofill:text-white autofill:shadow-[inset_0_0_0px_1000px_rgb(0,0,0)] sm:text-[20px] md:text-[16px]  "
             placeholder={i18nData("footer.form_email")}
             name="email"
             onChange={handleForm}
@@ -145,12 +145,12 @@ const Footer = memo(function Footer() {
 });
 const Information = memo(function Information(props) {
   return (
-    <div className="flex items-center justify-center gap-2 ">
-      <img src={props.logo} className="h-4 w-4 sm:h-6 sm:w-6"></img>
+    <div className="flex items-start justify-center gap-2 ">
+      <div>{props.logo}</div>
       <a
         href={props.url}
         aria-label={props.label}
-        className=" cursor-pointer text-[10px] font-light md:w-48 md:text-[12px] lg:w-72 lg:text-[16px] "
+        className="w-20 cursor-pointer text-[10px] font-light md:w-48 md:text-[12px] lg:w-72 lg:text-[16px] "
       >
         {props.info}
       </a>

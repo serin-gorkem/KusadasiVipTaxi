@@ -1,10 +1,9 @@
-// import { RiWhatsappFill } from "react-icons/ri";
+import { RiWhatsappFill } from "react-icons/ri";
 import { memo, useEffect, useState } from "react";
 import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProgressBar from "../components/ProgressBar";
 import { useI18n } from "../i18nContext";
-import whatsapp from "../assets/icons/whatsapp.svg";
 
 const responsive = {
   superLargeDesktop: {
@@ -120,11 +119,7 @@ const Home = memo(function Home() {
               href="https://wa.me/+905438083997"
               aria-label="Whatsapp redirect link"
             >
-              <img
-                src={whatsapp}
-                alt="Whatsapp Icon"
-                className="h-10 w-10 cursor-pointer"
-              ></img>
+            <RiWhatsappFill className="h-16 w-16 cursor-pointer text-primary-color"></RiWhatsappFill>
             </a>
           </div>
         )}

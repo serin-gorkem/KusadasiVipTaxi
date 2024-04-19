@@ -1,5 +1,5 @@
 import { memo, useRef } from "react";
-import arrowDown from "../assets/icons/arrowDown.svg";
+import { IoIosArrowRoundDown } from "react-icons/io";
 import { useI18n } from "../i18nContext";
 import PropTypes from "prop-types";
 
@@ -33,11 +33,10 @@ const About = memo(function About({ SlideIn }) {
           </p>
         </SlideIn>
 
-        {/* <IoIosArrowRoundDown
+        <IoIosArrowRoundDown
           className=" h-6 w-6 animate-bounce cursor-pointer text-primary-color sm:h-14 sm:w-14 "
           onClick={handleClick}
-        /> */}
-        <img src={arrowDown} className=" w-8 h-8 sm:w-14 sm:h-14 animate-bounce cursor-pointer" alt="arrow-down" onClick={handleClick} ></img>
+        />
       </div>
       <div
         className="m-auto flex w-full max-w-[1440px] p-4 py-8 max-sm:flex-col sm:gap-8 sm:py-20 "

@@ -42,15 +42,15 @@ const ChooseUs = memo(function ChooseUs({ SlideIn }) {
           </SlideIn>
           {animations.map((animation) => {
             return (
-              <SlideIn key={animation.id}>
-                <Facts
-                  factAnimation={animation.source}
-                  title={i18nData(`choose_us.facts.${animation.id}.title`)}
-                  description={i18nData(
-                    `choose_us.facts.${animation.id}.description`,
-                  )}
-                />
-              </SlideIn>
+              <Facts
+                key={animation.id}
+                factAnimation={animation.source}
+                title={i18nData(`choose_us.facts.${animation.id}.title`)}
+                description={i18nData(
+                  `choose_us.facts.${animation.id}.description`,
+                )}
+                SlideIn = {SlideIn}
+              />
             );
           })}
         </div>
