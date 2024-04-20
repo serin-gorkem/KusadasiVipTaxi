@@ -19,11 +19,11 @@ export default {
         "body":['Palanquin','Impact', 'sans-serif'],
       },
       animation:{
-        "progressBar": 'fill-progress-bar 4s infinite',
-        "disappear" : 'disappear-element 0.5s linear alternate forwards'
+        "progressBar": 'progressBarKF 4s infinite',
+        "moveIn" : 'moveInKf 0.5s linear alternate forwards'
       },
       keyframes : {
-        "fill-progress-bar" : {
+        "progressBarKF" : {
           "0%":{
             "width":"0%"
           },
@@ -31,9 +31,9 @@ export default {
             "width":"100%"
           }
         },
-        "disappear-element" :{
+        "moveInKF" :{
           "0%":{
-            "opacity":"1"
+            "translate-x":"1"
           },
           "100%":{
             "opacity":"0"

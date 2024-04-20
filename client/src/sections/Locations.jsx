@@ -77,10 +77,9 @@ const Locations = memo(function Locations({ SlideIn }) {
               className=" h-44 w-44 max-sm:hidden"
             />
           </div>
-          <SlideIn>
             <div
               aria-label="location titles"
-              className="grid grid-cols-3 place-items-center gap-4 overflow-hidden p-4 md:grid-cols-8 lg:z-20 lg:w-[1000px] lg:[&>*:nth-child(5)]:col-start-2 "
+              className="grid grid-cols-3 place-items-center gap-4 overflow-hidden p-4 md:grid-cols-8 lg:z-50 lg:w-[1000px] lg:[&>*:nth-child(5)]:col-start-2 "
             >
               {placeData.map((info) => {
                 return (
@@ -93,7 +92,6 @@ const Locations = memo(function Locations({ SlideIn }) {
                 );
               })}
             </div>
-          </SlideIn>
           <div className="information-container w-full max-container flex flex-col gap-4 p-6 lg:flex-row lg:py-8 ">
             <div className="lg:w-1/2 lg:py-0">
               <iframe

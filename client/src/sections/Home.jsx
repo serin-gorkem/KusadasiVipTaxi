@@ -119,7 +119,7 @@ const Home = memo(function Home() {
               href="https://wa.me/+905438083997"
               aria-label="Whatsapp redirect link"
             >
-            <RiWhatsappFill className="h-16 w-16 cursor-pointer text-primary-color"></RiWhatsappFill>
+              <RiWhatsappFill className="h-16 w-16 cursor-pointer text-primary-color"></RiWhatsappFill>
             </a>
           </div>
         )}
