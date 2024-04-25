@@ -48,7 +48,7 @@ const Home = memo(function Home() {
   }, []);
 
   return (
-    <div className=" relative">
+    <div className="relative">
       {jsonData && (
         <>
           <Slider

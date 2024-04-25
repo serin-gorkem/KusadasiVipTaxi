@@ -5,25 +5,24 @@ import { useI18n } from "../i18nContext";
 
 const footerContent = [
   {
-    logo: <FaWhatsapp/>,
+    logo: <FaWhatsapp />,
     info: "+90 543 808 39 97",
-    label:"phone number",
-    link:"https://wa.me/+905438083997"
+    label: "phone number",
+    link: "https://wa.me/+905438083997",
   },
   {
-    logo: <FaEnvelope/>,
+    logo: <FaEnvelope />,
     info: "ahmet409809@gmail.com",
-    label:"email address",
-    link:"mailto:ahmet409809@gmail.com"
+    label: "email address",
+    link: "mailto:ahmet409809@gmail.com",
   },
   {
-    logo: <FaLocationDot/>,
+    logo: <FaLocationDot />,
     info: "Aydin / Kusadasi",
-    label:"whatsapp number",
-    link:"https://maps.app.goo.gl/DYKu6NZHdjhnrkiQ7"
-  }
-]
-
+    label: "whatsapp number",
+    link: "https://maps.app.goo.gl/DYKu6NZHdjhnrkiQ7",
+  },
+];
 
 const Footer = memo(function Footer() {
   const [formData, setFormData] = useState({
@@ -64,9 +63,8 @@ const Footer = memo(function Footer() {
             </h2>
           </div>
         </div>
-        <div className=" flex flex-col items-start justify-center gap-2 py-4 px-10 text-primary-color sm:gap-4 ">
-        {
-          footerContent.map((item, index) => (
+        <div className=" flex flex-col items-start justify-center gap-2 px-10 py-4 text-primary-color sm:gap-4 ">
+          {footerContent.map((item, index) => (
             <Information
               key={index}
               logo={item.logo}
@@ -74,8 +72,7 @@ const Footer = memo(function Footer() {
               label={item.label}
               url={item.link}
             />
-          ))
-        }
+          ))}
         </div>
       </div>
       <div className=" mb-[7.5px] mt-2 h-[1px] bg-primary-color   "></div>
@@ -96,7 +93,7 @@ const Footer = memo(function Footer() {
         >
           <input
             type="text"
-            className="mb-3 w-full border-b-[1px] border-primary-color  bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder: sm:text-[20px] md:text-[16px] "
+            className="placeholder: mb-3 w-full border-b-[1px]  border-primary-color bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color sm:text-[20px] md:text-[16px] "
             placeholder={i18nData("footer.form_name")}
             name="name"
             onChange={handleForm}
@@ -106,7 +103,7 @@ const Footer = memo(function Footer() {
           ></input>
           <input
             type="email"
-            className="mb-3 w-full border-b-[1px] border-primary-color  bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color placeholder: autofill:text-white autofill:shadow-[inset_0_0_0px_1000px_rgb(0,0,0)] sm:text-[20px] md:text-[16px]  "
+            className="placeholder: mb-3 w-full border-b-[1px]  border-primary-color bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color autofill:text-white autofill:shadow-[inset_0_0_0px_1000px_rgb(0,0,0)] sm:text-[20px] md:text-[16px]  "
             placeholder={i18nData("footer.form_email")}
             name="email"
             onChange={handleForm}
@@ -134,11 +131,27 @@ const Footer = memo(function Footer() {
           </button>
         </form>
       </div>
-      <div className="flex items-center justify-start gap-1 text-[8px] text-primary-color  sm:text-[10px]">
-        <p> {i18nData("footer.copyright")} </p>
-        <p>
-          {new Date().getFullYear()} {i18nData("footer.company")}
-        </p>
+      <div className="flex items-center justify-between gap-1 text-[8px] text-primary-color  sm:text-[10px]">
+        <div> 
+          <a
+            href="https://www.linkedin.com/in/gorkem-serin-097606227/"
+            aria-label="Developer Linkedin Link"
+            className="flex gap-2"
+          >
+          <p>Desing :</p>
+            <img
+              src="/devLogo.png"
+              className=" w-14 sm:w-16"
+              alt="Developer Logo"
+            />
+          </a>
+        </div>
+        <div className="flex items-center">
+          <p className="text-[9px]"> {i18nData("footer.copyright")} </p>
+          <p className="text-[9px]">
+            {new Date().getFullYear()} {i18nData("footer.company")}
+          </p>
+        </div>
       </div>
     </div>
   );

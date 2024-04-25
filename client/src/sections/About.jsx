@@ -32,9 +32,8 @@ const About = memo(function About({ SlideIn }) {
             {i18nData("about.read_more")}
           </p>
         </SlideIn>
-
         <IoIosArrowRoundDown
-          className=" h-6 w-6 animate-bounce cursor-pointer text-primary-color sm:h-14 sm:w-14 "
+          className="h-10 w-10 animate-bounce cursor-pointer text-primary-color sm:h-14 sm:w-14 "
           onClick={handleClick}
         />
       </div>

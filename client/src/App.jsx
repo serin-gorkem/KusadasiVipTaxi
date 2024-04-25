@@ -25,8 +25,9 @@ const App = memo(function App() {
     <>
       {t && (
         <I18nProvider i18nData={t}>
+        <div className="animate-fade-in">
           <header>
-            <Header refs={refs} i18n={i18n} />
+            <Header refs={refs} i18n={i18n}  />
           </header>
           <main>
             <section ref={refs.home}>
@@ -45,6 +46,7 @@ const App = memo(function App() {
               <Testimonials SlideIn={SlideIn} />
             </section>
           </main>
+        </div>
           <footer>
             <Footer refs={refs} />
           </footer>

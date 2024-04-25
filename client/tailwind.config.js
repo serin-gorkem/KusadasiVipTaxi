@@ -20,7 +20,8 @@ export default {
       },
       animation:{
         "progressBar": 'progressBarKF 4s infinite',
-        "moveIn" : 'moveInKf 0.5s linear alternate forwards'
+        "moveIn" : 'moveInKf 0.5s linear alternate forwards',
+        "fade-in" : "fade-in 2s ease-in-out"
       },
       keyframes : {
         "progressBarKF" : {
@@ -37,6 +38,14 @@ export default {
           },
           "100%":{
             "opacity":"0"
+          }
+        },
+        "fade-in":{
+          '0%' :{
+            opacity : "0",
+          },
+          '100%' : {
+            opacity : "1",
           }
         }   
       }
