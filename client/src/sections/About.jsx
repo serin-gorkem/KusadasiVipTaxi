@@ -39,20 +39,19 @@ const About = memo(function About({ SlideIn }) {
         />
       </div>
       <div
-        className="flex w-full p-4 py-8 max-sm:flex-col sm:gap-8 sm:py-20 "
-        ref={scrollRef}
-      >
+        className="flex w-full sm:justify-center p-4 py-8 max-sm:flex-col sm:gap-8 sm:py-20 "
+        ref={scrollRef}>
         <SlideIn>
           <img
-            src="https://images.unsplash.com/photo-1613559446734-0a005faa40ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1623731002955-490c5503e670?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Owner Image"
             loading="lazy"
-            className=" h-52 w-96 rounded-md object-cover shadow-[5px_6px_20px_3px_rgba(0,0,0,0.25)] lg:h-[356px] lg:w-[3000px]"
+            className="h-52 w-[600px] rounded-md object-cover shadow-[5px_6px_20px_3px_rgba(0,0,0,0.25)] lg:h-[356px]"
           />
         </SlideIn>
-        <div>
+        <div className="sm:flex sm:flex-col sm:w-1/2">
           <SlideIn>
-            <h3 className=" mt-[10px] text-3xl font-bold lg:m-0 lg:text-3xl xl:text-4xl ">
+            <h3 className="mt-[10px] text-3xl font-bold lg:m-0 lg:text-3xl xl:text-4xl ">
               KusadasiVipTaxi
             </h3>
           </SlideIn>
