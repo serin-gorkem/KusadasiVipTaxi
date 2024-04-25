@@ -124,7 +124,7 @@ const Home = memo(function Home() {
           </div>
         )}
       </div>
-      <div className="absolute bottom-0 w-full max-sm:hidden">
+      <div className="absolute bottom-0 w-full">
         <ProgressBar />
       </div>
     </div>

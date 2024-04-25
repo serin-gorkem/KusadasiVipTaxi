@@ -125,7 +125,7 @@ const Locations = memo(function Locations({ SlideIn }) {
                 </Slider>
               </Suspense>
               <SlideIn>
-                <p>
+                <p className="text-center">
                   {i18nData(
                     `locations.info_text.${currentLocationIndexRef.current}.text`,
                   )}

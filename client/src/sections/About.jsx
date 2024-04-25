@@ -39,7 +39,7 @@ const About = memo(function About({ SlideIn }) {
         />
       </div>
       <div
-        className="m-auto flex w-full max-w-[1440px] p-4 py-8 max-sm:flex-col sm:gap-8 sm:py-20 "
+        className="flex w-full p-4 py-8 max-sm:flex-col sm:gap-8 sm:py-20 "
         ref={scrollRef}
       >
         <SlideIn>
@@ -50,7 +50,6 @@ const About = memo(function About({ SlideIn }) {
             className=" h-52 w-96 rounded-md object-cover shadow-[5px_6px_20px_3px_rgba(0,0,0,0.25)] lg:h-[356px] lg:w-[3000px]"
           />
         </SlideIn>
-
         <div>
           <SlideIn>
             <h3 className=" mt-[10px] text-3xl font-bold lg:m-0 lg:text-3xl xl:text-4xl ">

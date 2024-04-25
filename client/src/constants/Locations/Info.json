@@ -17,11 +17,6 @@
         "id": 3,
         "url": "https://images.unsplash.com/photo-1665841658206-607c4b4d1271?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ,"alt":"Efes 3 "
-      },
-      {
-        "id": 4,
-        "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/29/87/e9/efes-antik-kenti-tiyatrosu.jpg?w=800&h=-1&s=1"
-        ,"alt":"Efes 4 "
       }
     ],
     "mapURL": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d100742.55762411222!2d27.238472408313836!3d37.902272527871936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x14bea92b956a5427%3A0xd89b725d100f2ef4!2zS3XFn2FkYXPEsSwgQXlkxLFu!3m2!1d37.857912999999996!2d27.261015!4m5!1s0x14bead48f0b30447%3A0xd0fbf18a0924b6f8!2sAtat%C3%BCrk%2C%20Efes%20Antik%20Kenti%2C%20Efes%20Harabeleri%2C%2035920%20Sel%C3%A7uk%2F%C4%B0zmir!3m2!1d37.9409263!2d27.341457899999998!5e0!3m2!1str!2str!4v1711875783813!5m2!1str!2str",
@@ -33,7 +28,7 @@
     "images": [
       {
         "id": 5,
-        "url": "http://www.selcuk.gov.tr/kurumlar/selcuk.gov.tr/yeni%20site/meryemana.JPG"
+        "url": "https://images.unsplash.com/photo-1597886714315-af69bfeaefd5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ,"alt":"Meryem Ana 1 "
       },
       {
@@ -61,13 +56,13 @@
       },
       {
         "id": 9,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/14/92/f4/2a/kilise-sirince-selcuk.jpg"
+        "url": "https://images.unsplash.com/photo-1551396385-781014fde46a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ,"alt":"Şirince 2 "
 
       },
       {
         "id": 10,
-        "url": "https://seyler.ekstat.com/img/max/800/s/sb2pn8PlzK5cadCK-637677489778287853.jpg"
+        "url": "https://images.unsplash.com/photo-1644402659388-1b09957d029d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ,"alt":"Şirince 3 "
       }
     ],
@@ -103,7 +98,7 @@
     "images": [
       {
         "id": 14,
-        "url": "https://www.viago.com.tr/dosya/2928/blog/4-1-izmir-havalimani_464.webp"
+        "url": "https://kriterdergi.com/images/news/2020/02/01/yunus-furuncu.jpg"
         ,"alt":"İzmir 1 "
       },
       {
@@ -113,7 +108,7 @@
       },
       {
         "id": 16,
-        "url": "https://images.unsplash.com/photo-1583060245154-083ff3f59b53?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "url": "https://i.ytimg.com/vi/H-sb5fT1Ckw/maxresdefault.jpg"
         ,"alt":"İzmir 3 "
       }
     ],
@@ -126,7 +121,7 @@
     "images": [
       {
         "id": 17,
-        "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/80/53/90/img-20170627-155549-240.jpg?w=1200&h=-1&s=1"
+        "url": "https://www.hepsiburadaseyahat.com/blog/wp-content/uploads/2022/09/dilek-yarimadasi-2-1-scaled.jpg"
         ,"alt":"Milli Park 1 "
         
       },
@@ -137,7 +132,7 @@
       },
       {
         "id": 19,
-        "url": "http://www.güzelçamlı.com/media/k2/items/cache/97aa066dcc42404e7602768333af5659_XL.jpg"
+        "url": "https://www.hepsiburadaseyahat.com/blog/wp-content/uploads/2022/09/dilek-yarimadasi-1920x1280.jpg"
         ,"alt":"Milli Park 3 "
       }
     ],
