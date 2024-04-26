@@ -49,7 +49,7 @@ const ChooseUs = memo(function ChooseUs({ SlideIn }) {
                 description={i18nData(
                   `choose_us.facts.${animation.id}.description`,
                 )}
-                SlideIn = {SlideIn}
+                SlideIn={SlideIn}
               />
             );
           })}

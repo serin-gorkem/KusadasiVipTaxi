@@ -38,17 +38,16 @@ const About = memo(function About({ SlideIn }) {
         />
       </div>
       <div
-        className="flex w-full sm:justify-center p-4 py-8 max-sm:flex-col sm:gap-8 sm:py-20 "
-        ref={scrollRef}>
-        <SlideIn>
-          <img
-            src="https://images.unsplash.com/photo-1623731002955-490c5503e670?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Owner Image"
-            loading="lazy"
-            className="h-52 w-[600px] rounded-md object-cover shadow-[5px_6px_20px_3px_rgba(0,0,0,0.25)] lg:h-[356px]"
-          />
-        </SlideIn>
-        <div className="sm:flex sm:flex-col sm:w-1/2">
+        className="max-container flex w-full p-4 py-8 max-sm:flex-col sm:justify-center sm:gap-8 sm:py-20 "
+        ref={scrollRef}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1623731002955-490c5503e670?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="About image"
+          loading="lazy"
+          className="h-52 w-[600px] rounded-md border-4 border-solid border-black object-cover shadow-[5px_6px_20px_3px_rgba(0,0,0,0.15)] lg:h-[356px]"
+        />
+        <div className="sm:flex sm:w-1/2 sm:flex-col">
           <SlideIn>
             <h3 className="mt-[10px] text-3xl font-bold lg:m-0 lg:text-3xl xl:text-4xl ">
               KusadasiVipTaxi

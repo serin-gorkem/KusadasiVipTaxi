@@ -2,26 +2,26 @@ import { memo, useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import PropTypes from "prop-types";
 import { useI18n } from "../i18nContext";
-import trFlag from "../assets/icons/trFlag.svg"
-import enFlag from "../assets/icons/enFlag.svg"
-import deFlag from "../assets/icons/deFlag.svg"
-const countryIcons =[
+import trFlag from "../assets/icons/trFlag.svg";
+import enFlag from "../assets/icons/enFlag.svg";
+import deFlag from "../assets/icons/deFlag.svg";
+const countryIcons = [
   {
     src: trFlag,
-    name : "TR",
-    id: "0"
+    name: "TR",
+    id: "0",
   },
   {
     src: enFlag,
-    name : "EN",
-    id: "1"
+    name: "EN",
+    id: "1",
   },
   {
     src: deFlag,
-    name : "DE",
-    id: "2"
-  }
-]
+    name: "DE",
+    id: "2",
+  },
+];
 
 const Dropdown = memo(function Dropdown({ handleLanguageChange }) {
   const [isOpen, setIsOpen] = useState(false);

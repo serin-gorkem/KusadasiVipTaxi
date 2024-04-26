@@ -75,22 +75,24 @@ const Footer = memo(function Footer() {
           ))}
         </div>
       </div>
-      <div className=" mb-[7.5px] mt-2 h-[1px] bg-primary-color   "></div>
-      <div className="max-container my-6 flex items-center justify-between gap-2 md:gap-6">
-        <div className="flex flex-col">
-          <h3 className=" w-[182px] text-[10px] font-light text-neutral sm:text-[36px] md:w-[360] md:text-[20px] lg:w-[600] lg:text-[24px] xl:w-[619px] ">
+      <div className=" mb-[7.5px] mt-2 h-[1px] bg-primary-color"></div>
+      <div className="max-container my-6 flex flex-col items-center justify-between gap-8 sm:gap-16 ">
+        <div className="flex w-full flex-col items-start justify-start">
+          <h3 className="text-[14px] font-light text-neutral sm:text-[36px] md:text-[20px] lg:text-[32px]  ">
             {i18nData("footer.slogan")}
           </h3>
-
-          <h4 className=" text-[8px] text-primary-color sm:text-[32px] md:text-[24px] ">
+          <h4 className=" text-[12px] text-primary-color sm:text-[32px] md:text-[24px] ">
             {i18nData("footer.sub_slogan")}
           </h4>
         </div>
         <form
-          className="m-0"
+          className="m-0 w-full"
           action="https://formspree.io/f/myyrbvan"
           method="POST"
         >
+          <p className=" mb-4 text-3xl text-white sm:mb-8 sm:text-5xl ">
+            {i18nData("footer.get_in_touch")}{" "}
+          </p>
           <input
             type="text"
             className="placeholder: mb-3 w-full border-b-[1px]  border-primary-color bg-transparent text-[6px] text-neutral outline-none placeholder:text-primary-color sm:text-[20px] md:text-[16px] "
@@ -132,13 +134,13 @@ const Footer = memo(function Footer() {
         </form>
       </div>
       <div className="flex items-center justify-between gap-1 text-[8px] text-primary-color  sm:text-[10px]">
-        <div> 
+        <div>
           <a
             href="https://www.linkedin.com/in/gorkem-serin-097606227/"
             aria-label="Developer Linkedin Link"
             className="flex gap-2"
           >
-          <p>Desing :</p>
+            <p>Desing :</p>
             <img
               src="/devLogo.png"
               className=" w-14 sm:w-16"
@@ -158,8 +160,8 @@ const Footer = memo(function Footer() {
 });
 const Information = memo(function Information(props) {
   return (
-    <div className="flex items-start justify-center gap-2 ">
-      <div>{props.logo}</div>
+    <div className="flex items-center justify-center gap-2 ">
+      <div className=" text-sm sm:text-xl ">{props.logo}</div>
       <a
         href={props.url}
         aria-label={props.label}

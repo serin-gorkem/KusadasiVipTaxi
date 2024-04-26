@@ -25,28 +25,28 @@ const App = memo(function App() {
     <>
       {t && (
         <I18nProvider i18nData={t}>
-        <div className="animate-fade-in">
-          <header>
-            <Header refs={refs} i18n={i18n}  />
-          </header>
-          <main>
-            <section ref={refs.home}>
-              <Home />
-            </section>
-            <section ref={refs.locations}>
-              <Locations SlideIn={SlideIn} />
-            </section>
-            <section ref={refs.chooseUs}>
-              <ChooseUs SlideIn={SlideIn} />
-            </section>
-            <section ref={refs.about}>
-              <About SlideIn={SlideIn} />
-            </section>
-            <section ref={refs.testimonials}>
-              <Testimonials SlideIn={SlideIn} />
-            </section>
-          </main>
-        </div>
+          <div className="animate-fade-in">
+            <header>
+              <Header refs={refs} i18n={i18n} />
+            </header>
+            <main>
+              <section ref={refs.home}>
+                <Home />
+              </section>
+              <section ref={refs.locations}>
+                <Locations SlideIn={SlideIn} />
+              </section>
+              <section ref={refs.chooseUs}>
+                <ChooseUs SlideIn={SlideIn} />
+              </section>
+              <section ref={refs.about}>
+                <About SlideIn={SlideIn} />
+              </section>
+              <section ref={refs.testimonials}>
+                <Testimonials SlideIn={SlideIn} />
+              </section>
+            </main>
+          </div>
           <footer>
             <Footer refs={refs} />
           </footer>

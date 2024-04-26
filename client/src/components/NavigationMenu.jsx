@@ -4,7 +4,11 @@ import PropTypes from "prop-types";
 import { useI18n } from "../i18nContext";
 import { memo } from "react";
 
-const NavigationMenu = memo(function NavigationMenu({ open, toggleNavigationMenu, refs }) {
+const NavigationMenu = memo(function NavigationMenu({
+  open,
+  toggleNavigationMenu,
+  refs,
+}) {
   const i18nData = useI18n();
 
   const menuElementStrings = [
@@ -25,7 +29,7 @@ const NavigationMenu = memo(function NavigationMenu({ open, toggleNavigationMenu
     return (
       <div key={element.name}>
         <li
-          className="flex h-24 cursor-pointer items-center justify-between px-3  text-[12px] text-white hover:bg-primary-color active:bg-primary-color md:text-[16px] xl:h-28 xl:text-[24px]"
+          className="flex h-24 cursor-pointer items-center justify-between px-3 text-[12px] text-white hover:bg-primary-color active:bg-primary-color md:text-[16px] xl:text-[18px]"
           onClick={() => handlePage(element.url)}
         >
           <p>{element.name}</p>
@@ -46,7 +50,7 @@ const NavigationMenu = memo(function NavigationMenu({ open, toggleNavigationMenu
             className=" absolute right-2 top-5 h-8 w-8 cursor-pointer text-primary-color"
             onClick={toggleNavigationMenu}
           />
-          <div className=" relative top-20">
+          <div className="relative top-20">
             <ul className="flex flex-col">{menuItems}</ul>
           </div>
         </div>

@@ -39,7 +39,7 @@ const Locations = memo(function Locations({ SlideIn }) {
         const jsonModule = await import("../constants/Locations/Info.json");
         // Access the JSON data from the module namespace object
         setPlaceData(jsonModule.default);
-        setCurrentLocation(jsonModule.default[currentLocationIndexRef.current])
+        setCurrentLocation(jsonModule.default[currentLocationIndexRef.current]);
       } catch (error) {
         console.error("Error fetching JSON data:", error);
       }
@@ -77,22 +77,22 @@ const Locations = memo(function Locations({ SlideIn }) {
               className=" h-44 w-44 max-sm:hidden"
             />
           </div>
-            <div
-              aria-label="location titles"
-              className="grid grid-cols-3 place-items-center gap-4 overflow-hidden p-4 md:grid-cols-8 lg:z-50 lg:w-[1000px] lg:[&>*:nth-child(5)]:col-start-2 "
-            >
-              {placeData.map((info) => {
-                return (
-                  <Place
-                    key={info.id}
-                    id={info.id}
-                    changeLocation={handleChangeLocation}
-                    title={info.title}
-                  />
-                );
-              })}
-            </div>
-          <div className="information-container w-full max-container flex flex-col gap-4 p-6 lg:flex-row lg:py-8 ">
+          <div
+            aria-label="location titles"
+            className="grid grid-cols-3 place-items-center gap-4 overflow-hidden p-4 md:grid-cols-8 lg:z-40 lg:w-[1000px] lg:[&>*:nth-child(5)]:col-start-2 "
+          >
+            {placeData.map((info) => {
+              return (
+                <Place
+                  key={info.id}
+                  id={info.id}
+                  changeLocation={handleChangeLocation}
+                  title={info.title}
+                />
+              );
+            })}
+          </div>
+          <div className="information-container max-container flex w-full flex-col gap-4 p-6 lg:flex-row lg:py-8 ">
             <div className="lg:w-1/2 lg:py-0">
               <iframe
                 className="h-96 w-full shadow-[0px_4px_4px_rgba(0,0,0,0.25)] lg:h-full "

@@ -14,7 +14,7 @@ const Testimonials = memo(function Testimonials({ SlideIn }) {
           </h1>
         </SlideIn>
       </div>
-      <div className="gap-30 flex h-fit w-full flex-col items-center justify-evenly sm:flex-row sm:items-start">
+      <div className="max-container flex h-fit w-full flex-col items-center justify-around sm:flex-row sm:items-start">
         <SlideIn>
           <div className="my-16">
             <div id="TA_selfserveprop588">
