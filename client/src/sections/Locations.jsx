@@ -51,10 +51,9 @@ const Locations = memo(function Locations() {
         <div className="flex flex-col items-center justify-center lg:flex lg:flex-col">
           <div className="flex flex-col items-center justify-center sm:flex-row">
             <div className=" px-4 py-2">
-              <h1 className=" text-center text-[28px] font-bold text-neutral-dark lg:text-[40px] ">
+              <h1 className=" text-center text-[28px] font-serif tracking-tighter font-bold text-neutral-dark lg:text-[40px] ">
                 {i18nData("locations.heading")}
               </h1>
-
               <h2 className=" text-center text-[14px] font-semibold text-neutral-dark lg:text-[20px]  ">
                 {i18nData("locations.subheading")}
               </h2>
@@ -75,7 +74,7 @@ const Locations = memo(function Locations() {
             })}
           </div>
           <div className="information-container max-container flex w-full flex-col gap-4 p-6 lg:flex-row lg:py-8 ">
-            <div className="lg:w-1/2 lg:py-0">
+            <div className="lg:w-1/2 lg:py-0 flex flex-col gap-8">
               <iframe
                 className="h-96 w-full shadow-[0px_4px_4px_rgba(0,0,0,0.25)] lg:h-full "
                 aria-label="map"
@@ -92,7 +91,7 @@ const Locations = memo(function Locations() {
                   infinite={true}
                   autoPlaySpeed={4000}
                   transitionDuration={800}
-                  className="z-0 h-[550px] w-full md:h-[360px] xl:h-[400px]"
+                  className="z-0 h-[550px] w-full md:h-[360px] lg:h-full"
                 >
                   {currentLocation.images.map((image) => {
                     return (
@@ -100,7 +99,7 @@ const Locations = memo(function Locations() {
                         key={image.id}
                         src={image.url}
                         alt={image.alt}
-                        className=" h-[550px] rounded-full  bg-center object-cover p-2 md:h-[360px] xl:h-[400px] xl:w-full xl:rounded-none xl:p-0 "
+                        className=" h-[550px] rounded-full  bg-center object-cover p-2 md:h-[360px] xl:h-96 xl:w-full xl:rounded-none xl:p-0 "
                       />
                     );
                   })}

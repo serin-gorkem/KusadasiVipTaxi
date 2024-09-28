@@ -17,7 +17,6 @@ const About = memo(function About() {
   return (
     <>
       <div className="flex h-[217px] w-full  flex-col items-start p-6 justify-center bg-neutral-dark text-center text-neutral shadow-[0px_13px_7.7px_0px_rgba(0,0,0,0.25)] sm:h-[500px] ">
-        
           <h1 className="mb-[10px] text-[32px] font-bold sm:mb-[20px] sm:text-[48px] ">
             {i18nData("about.title")}
           </h1>

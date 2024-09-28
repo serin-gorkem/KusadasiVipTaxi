@@ -4,61 +4,17 @@
 
 @layer base {
     body {
-        @apply font-body bg-base
-    }
-
-    /* palanquin-300 - latin-ext */
-    @font-face {
-        font-display: swap;
-        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Palanquin';
-        font-style: normal;
-        font-weight: 300;
-        src: url('../fonts/palanquin-v13-latin-ext-300.woff2') format('woff2');
-        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
-    /* palanquin-500 - latin-ext */
-    @font-face {
-        font-display: swap;
-        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Palanquin';
-        font-style: normal;
-        font-weight: 500;
-        src: url('../fonts/palanquin-v13-latin-ext-500.woff2') format('woff2');
-        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
-    /* palanquin-600 - latin-ext */
-    @font-face {
-        font-display: swap;
-        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Palanquin';
-        font-style: normal;
-        font-weight: 600;
-        src: url('../fonts/palanquin-v13-latin-ext-600.woff2') format('woff2');
-        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
-    /* palanquin-700 - latin-ext */
-    @font-face {
-        font-display: swap;
-        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Palanquin';
-        font-style: normal;
-        font-weight: 700;
-        src: url('../fonts/palanquin-v13-latin-ext-700.woff2') format('woff2');
-        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        @apply font-sans bg-base
     }
 }
 
 @layer components {
     .max-container {
-        max-width: 1024px;
+        max-width: 1440px;
         margin: 0 auto;
 
         @media (min-width: 1536px) {
-            max-width: 1440px;
+            max-width: 1920px;
         }
     }
 

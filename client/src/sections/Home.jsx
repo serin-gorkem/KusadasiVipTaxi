@@ -73,7 +73,7 @@ const Home = memo(function Home() {
               );
             })}
           </Slider>
-          <div className="absolute z-0 h-screen w-full bg-[#00000040] "></div>
+          <div className="absolute z-10 h-screen w-full bg-[#00000040]"></div>
           <Slider
             responsive={responsive}
             infinite={true}
@@ -98,16 +98,16 @@ const Home = memo(function Home() {
         </Suspense>
         </>
       )}
-      <div className="relative flex h-screen flex-col items-center justify-center p-6 text-center text-white ">
-        <h1 className="z-10 mb-1 text-4xl font-extrabold md:text-6xl lg:text-[100px]">
+      <div className="relative max-container flex h-screen flex-col items-center justify-center gap-2 sm:gap-6 p-6 text-center text-white ">
+        <h1 className="z-10  text-[2.8rem] font-serif lg:text-[6rem] lg:tracking-wider md:text-6xl">
           {i18nData("home.title")}
         </h1>
 
-        <h2 className="z-10 mb-4 text-2xl font-medium md:text-4xl lg:text-6xl  ">
+        <h2 className="z-10 text-[2.5rem] font-serif text-4xl font-medium md:text-4xl lg:text-6xl">
           {i18nData("home.subtitle")}
         </h2>
 
-        <p className="z-10 w-[300px] text-xs md:w-[450px] md:text-xl lg:w-[600px] lg:text-2xl ">
+        <p className="z-10 w-[300px] text-[1rem] md:w-[450px] md:text-xl lg:w-[600px] lg:text-2xl ">
           {i18nData("home.slogan")}
         </p>
         {showPopUp && (
