@@ -43,7 +43,6 @@ const NavigationMenu = memo(function NavigationMenu({
     <>
       {open && (
         <div
-          aria-label="navigation menu"
           className="glass-bg fixed right-0 z-50 h-screen w-1/2 sm:w-1/5 md:w-2/6 "
         >
           <IoCloseCircle

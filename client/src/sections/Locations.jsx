@@ -3,8 +3,6 @@ import { Suspense, memo, useEffect, useRef, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import { useI18n } from "../i18nContext";
 import { lazy } from "react";
-import Lottie from "lottie-light-react";
-import Taxi from "../assets/Taxi.json";
 
 const Slider = lazy(() => import("react-multi-carousel"));
 const Place = lazy(() => import("../components/Place"));
@@ -23,7 +21,7 @@ const responsive = {
   },
 };
 
-const Locations = memo(function Locations({ SlideIn }) {
+const Locations = memo(function Locations() {
   const currentLocationIndexRef = useRef(0);
   const [placeData, setPlaceData] = useState(null);
   const [currentLocation, setCurrentLocation] = useState(null);
@@ -53,32 +51,16 @@ const Locations = memo(function Locations({ SlideIn }) {
         <div className="flex flex-col items-center justify-center lg:flex lg:flex-col">
           <div className="flex flex-col items-center justify-center sm:flex-row">
             <div className=" px-4 py-2">
-              <SlideIn className="w-full px-4 py-2">
-                <h1 className=" text-center text-[28px] font-bold text-neutral-dark lg:text-[40px] ">
-                  {i18nData("locations.heading")}
-                </h1>
-              </SlideIn>
-              <SlideIn>
-                <h2 className=" text-center text-[14px] font-semibold text-neutral-dark lg:text-[20px]  ">
-                  {i18nData("locations.subheading")}
-                </h2>
-              </SlideIn>
+              <h1 className=" text-center text-[28px] font-bold text-neutral-dark lg:text-[40px] ">
+                {i18nData("locations.heading")}
+              </h1>
+
+              <h2 className=" text-center text-[14px] font-semibold text-neutral-dark lg:text-[20px]  ">
+                {i18nData("locations.subheading")}
+              </h2>
             </div>
-            <Lottie
-              animationData={Taxi}
-              autoplay={false}
-              loop={false}
-              className=" h-44 w-44 sm:hidden"
-            />
-            <Lottie
-              animationData={Taxi}
-              autoplay={true}
-              loop={true}
-              className=" h-44 w-44 max-sm:hidden"
-            />
           </div>
           <div
-            aria-label="location titles"
             className="grid grid-cols-3 place-items-center gap-4 overflow-hidden p-4 md:grid-cols-8 lg:z-40 lg:w-[1000px] lg:[&>*:nth-child(5)]:col-start-2 "
           >
             {placeData.map((info) => {
@@ -124,13 +106,13 @@ const Locations = memo(function Locations({ SlideIn }) {
                   })}
                 </Slider>
               </Suspense>
-              <SlideIn>
-                <p className="text-center">
-                  {i18nData(
-                    `locations.info_text.${currentLocationIndexRef.current}.text`,
-                  )}
-                </p>
-              </SlideIn>
+
+              <p className="text-center">
+                {i18nData(
+                  `locations.info_text.${currentLocationIndexRef.current}.text`,
+                )}
+              </p>
+
               <button className=" my-4 flex h-8 w-fit  items-center justify-center self-center rounded-lg bg-primary-color px-6 py-2 shadow-lg hover:text-neutral active:shadow-inner md:h-12">
                 <a
                   href={currentLocation.readMore}

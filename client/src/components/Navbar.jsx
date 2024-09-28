@@ -6,7 +6,6 @@ import { memo } from "react";
 const Navbar = memo(function Navbar(props) {
   return (
     <nav
-      aria-label="navigation bar"
       className="navbar max-container fixed z-40 flex w-full items-center justify-between p-3"
     >
       <div>

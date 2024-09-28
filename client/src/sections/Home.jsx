@@ -1,5 +1,5 @@
 import { RiWhatsappFill } from "react-icons/ri";
-import { memo, useEffect, useState } from "react";
+import { memo, Suspense, useEffect, useState } from "react";
 import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProgressBar from "../components/ProgressBar";
@@ -51,6 +51,7 @@ const Home = memo(function Home() {
     <div className="relative">
       {jsonData && (
         <>
+        <Suspense fallback={<h1>Loading...</h1>}>
           <Slider
             responsive={responsive}
             infinite={true}
@@ -94,6 +95,7 @@ const Home = memo(function Home() {
               );
             })}
           </Slider>
+        </Suspense>
         </>
       )}
       <div className="relative flex h-screen flex-col items-center justify-center p-6 text-center text-white ">
@@ -124,7 +126,7 @@ const Home = memo(function Home() {
           </div>
         )}
       </div>
-      <div className="absolute bottom-0 w-full">
+      <div className="absolute hidden sm:block bottom-0 w-full">
         <ProgressBar />
       </div>
     </div>

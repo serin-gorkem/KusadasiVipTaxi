@@ -55,7 +55,6 @@ const Dropdown = memo(function Dropdown({ handleLanguageChange }) {
         onClick={toggleDropdown}
       />
       <div
-        aria-label="horizontal line"
         className="horizontal-line bg-neutral-400 h-12 w-0.5 "
       ></div>
       {isOpen && (
