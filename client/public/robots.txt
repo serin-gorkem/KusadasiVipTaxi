@@ -4,4 +4,4 @@ Disallow: /login/
 Disallow: /temp/
 Disallow: /private/
 Allow: /
-Sitemap: https://www.kusadasiviptaxi.com/sitemap.xml
+Sitemap: https://kusadasiviptaxi.com/sitemap.xml
