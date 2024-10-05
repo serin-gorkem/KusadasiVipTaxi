@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /temp/
+Disallow: /private/
+Allow: /
+Sitemap: https://www.kusadasiviptaxi.com/sitemap.xml

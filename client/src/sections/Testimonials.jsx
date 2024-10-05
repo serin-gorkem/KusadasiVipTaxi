@@ -2,20 +2,20 @@ import { memo } from "react";
 import { useI18n } from "../i18nContext";
 import PropTypes from "prop-types";
 
-const Testimonials = memo(function Testimonials() {
+const Testimonials = memo(function Testimonials({ SlideIn }) {
   const i18nData = useI18n();
 
   return (
     <div className="relative flex flex-col items-center justify-center">
       <div className=" -z-10 flex h-[217px] w-full  flex-col items-center justify-center bg-neutral-dark text-center text-neutral shadow-[0px_13px_7.7px_0px_rgba(0,0,0,0.25)] sm:h-[355px] ">
-        
+        <SlideIn>
           <h1 className=" text-[32px] font-bold sm:text-[48px] ">
             {i18nData("testimonials.title")}
           </h1>
-        
+        </SlideIn>
       </div>
       <div className="max-container flex h-fit w-full flex-col items-center justify-around sm:flex-row sm:items-start">
-        
+        <SlideIn>
           <div className="my-16">
             <div id="TA_selfserveprop588">
               <ul id="NIufKgr4l">
@@ -34,8 +34,8 @@ const Testimonials = memo(function Testimonials() {
               </ul>
             </div>
           </div>
-        
-        
+        </SlideIn>
+        <SlideIn>
           <div className="my-16">
             <div id="TA_cdswritereviewlg719" className="TA_cdswritereviewlg">
               <ul id="4G2407p6KWG" className="TA_links 3d3paC">
@@ -54,7 +54,7 @@ const Testimonials = memo(function Testimonials() {
               </ul>
             </div>
           </div>
-        
+        </SlideIn>
       </div>
     </div>
   );

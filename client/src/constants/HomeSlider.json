@@ -1,44 +1,44 @@
 {
   "portrait": [
     {
-      "src":"./images/Mobile-01.webp",
+      "src": "https://images.unsplash.com/photo-1645485858906-56fc0972f31f?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": "0",
       "alt": "Güvercin Ada "
     },
     {
-      "src":"./images/Mobile-02.webp",
+      "src": "https://images.unsplash.com/photo-1663015824635-87572304aa4c?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": "1",
       "alt": "Efes Antik Tiyatro"
     },
     {
-      "src":"./images/Mobile-03.webp",
+      "src": "https://images.unsplash.com/photo-1645485146899-7249c91bbf44?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": "2",
       "alt": "Efes harabeleri"
     },
     {
-      "src":"./images/Mobile-04.webp",
+      "src": "https://images.unsplash.com/photo-1706166150941-e927183bbb41?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": "3",
       "alt": "El heykeli"
     }
   ],
   "landscape": [
     {
-      "src":"./images/Pc-01.webp",
+      "src": "https://images.unsplash.com/photo-1560927083-2131878887c5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": "4",
       "alt": "El heykeli"
     },
     {
-      "src":"./images/Pc-02.webp",
+      "src": "https://images.unsplash.com/photo-1582380625189-423697e32b92?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": "5",
       "alt": "Efes harabeleri"
     },
     {
-      "src":"./images/Pc-03.webp",
+      "src": "https://images.unsplash.com/photo-1688675110872-94e38720fcf4?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": "6",
       "alt": "Kusadasi yazısı"
     },
     {
-      "src":"./images/Pc-04.webp",
+      "src": "https://images.unsplash.com/photo-1583062482441-aa1124142248?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": "7",
       "alt": "Konak saat kulesi"
     }
