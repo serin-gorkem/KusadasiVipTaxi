@@ -133,15 +133,15 @@ const Footer = memo(function Footer() {
           </button>
         </form>
       </div>
-      <div className="flex items-center justify-between gap-1 text-[8px] text-primary-color  sm:text-[10px]">
+      <div className="flex items-center justify-between gap-1 text-[16px] text-primary-color  sm:text-[10px]">
         <div>
-          <a
+          <p
             href="https://www.linkedin.com/in/gorkem-serin-097606227/"
             aria-label="Developer Linkedin Link"
             className="flex gap-2"
           >
-            <p>Desing : Crehera Agency</p>
-          </a>
+            Website Designed by Crehera Agency - Gorkem Serin
+          </p>
         </div>
         <div className="flex items-center">
           <p className="text-[9px]"> {i18nData("footer.copyright")} </p>
