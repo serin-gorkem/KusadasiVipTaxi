@@ -140,12 +140,7 @@ const Footer = memo(function Footer() {
             aria-label="Developer Linkedin Link"
             className="flex gap-2"
           >
-            <p>Desing :</p>
-            <img
-              src="/devLogo.png"
-              className=" w-14 sm:w-16"
-              alt="Developer Logo"
-            />
+            <p>Desing : Crehera Agency</p>
           </a>
         </div>
         <div className="flex items-center">
